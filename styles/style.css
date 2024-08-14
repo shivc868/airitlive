@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: helvetica-bold;
+  src: url("../public/fonts/Helvetica\ CE\ Bold.otf");
+}
+
+.gradient-hero-main-text {
+  background: linear-gradient(92deg, #6e00ae 1.72%, #290040 98.28%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 4px 7.3px rgba(0, 0, 0, 0.15);
+  font-style: normal;
+  line-height: 111.765%;
+  /* letter-spacing: 6.8px; */
+}
+
+.platform-slider-wrapper
+  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -40px !important;
+}
