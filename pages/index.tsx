@@ -16,10 +16,10 @@ export default function Home() {
     <>
       <main className="bg-main-bg ">
         {" "}
-        {/* <Header />
+        <Header />
         <Hero />
         <Amplify />
-        <Platforms /> */}
+        <Platforms />
         <MobileNetwork />
         <Testimonial />
         <ContactUs />
