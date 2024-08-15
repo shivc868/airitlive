@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
                   <li key={linkIndex} className="h-[14px]">
                     <Link
                       href={link.href}
-                      className="text-[9.219px] gap-0.5 font-light leading-none hover:underline flex justify-start items-center duration-300 ease-in-out transition-all"
+                      className="text-[9.219px] gap-0.5 font-light leading-none hover:underline flex justify-start items-start duration-300 ease-in-out transition-all"
                     >
                       {link.name}
                       {link.isExternal && (

@@ -1,5 +1,6 @@
 import Footer from "@/components/common/Footer";
 import Header from "@/components/common/Header";
+import MobileNetwork from "@/components/common/mobilenetwork/MobileNetwork";
 import Amplify from "@/components/home/Amplify";
 import Hero from "@/components/home/Hero";
 import Platforms from "@/components/home/Platforms";
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <Amplify />
         <Platforms />
+        <MobileNetwork />
         <Footer />
       </main>
     </>
