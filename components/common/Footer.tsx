@@ -4,14 +4,12 @@ import Link from "next/link";
 import { footerData, socialLinks } from "./Helper";
 import { ExternalIcon } from "./Icons";
 
-
-
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 py-9 sm:py-10 px-4  font-inter">
       <div className={styles.container}>
         <img src="/img/logo.png" className="hidden md:block w-[100px]" alt="" />
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-7 mt-3">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-7 lg:gap-0 mt-3">
           {footerData.map((section, index) => (
             <div key={index}>
               <h3 className="text-white text-[10.635px] leading-[164.555%] font-semibold mb-[9.4px]">
