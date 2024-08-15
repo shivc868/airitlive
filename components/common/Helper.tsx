@@ -57,3 +57,15 @@ export const socialLinks = [
   { href: "", icon: <XIcon /> },
   { href: "", icon: <DiscordIcon /> },
 ];
+export const networks = [
+  { src: "/img/pluto.webp", alt: "Pluto" },
+  { src: "/img/discovery.webp", alt: "Discovery" },
+  { src: "/img/tubi.webp", alt: "Tubi" },
+  { src: "/img/paramount.webp", alt: "Paramount" },
+  { src: "/img/mlb.webp", alt: "MLB" },
+  { src: "/img/amc.png", alt: "AMC" },
+  { src: "/img/fubo.webp", alt: "Fubo" },
+  { src: "/img/fox-sports.webp", alt: "Fox Sports" },
+  { src: "/img/epsilon.png", alt: "Epsilon" },
+  { src: "/img/news18.webp", alt: "News18" },
+];
