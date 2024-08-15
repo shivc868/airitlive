@@ -24,6 +24,7 @@ const config: Config = {
         thunder: "#2D293E",
         purple: "#802BB1",
         plum: "#502C6D",
+        "light-gray": "rgba(229,230,236,0.50)",
         honey: "#62217E",
       },
     },
