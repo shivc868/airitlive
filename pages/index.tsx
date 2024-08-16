@@ -8,6 +8,7 @@ import { Inter } from "next/font/google";
 import TestimoniaCard from "@/components/testimonial/TestimoniaCard";
 import Testimonial from "@/components/testimonial/Testimonial";
 import ContactUs from "@/components/common/contactus/ContactUs";
+import ProblemSolutions from "@/components/home/ProblemSolutions";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function Home() {
         <Amplify />
         <Platforms />
         <MobileNetwork />
+        <ProblemSolutions />
         <Testimonial />
         <ContactUs />
         <Footer />

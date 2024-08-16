@@ -16,39 +16,40 @@ export default function PlatformSlider() {
     <div className="mt-8 platform-slider-wrapper">
       <Swiper
         className="mySwiper pb-[50px]"
-        slidesPerView={3}
-        spaceBetween={30}
+        slidesPerView={"auto"}
+        spaceBetween={20}
+        loop={true}
         pagination={{
           clickable: true,
         }}
         modules={[Pagination, Navigation]}
       >
-        <SwiperSlide>
-          <div className="flex flex-col">
+        <SwiperSlide className="!w-[320px]">
+          <div className="flex flex-col w-full">
             <img
               src="/img/platform-1.png"
-              className="w-full h-[250px] object-cover object-center"
+              className="w-full h-[220px] object-cover object-center"
               alt=""
             />
 
             <h2 className="text-center text-thunder text-lg font-inter">CTV</h2>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex flex-col">
+        <SwiperSlide className="!w-[320px]">
+          <div className="flex flex-col w-full">
             <img
               src="/img/platform-2.png"
-              className="w-full h-[250px] object-cover object-center"
+              className="w-full h-[220px] object-cover object-center"
               alt=""
             />
             <h2 className="text-center text-thunder text-lg font-inter">OTT</h2>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex flex-col">
+        <SwiperSlide className="!w-[320px]">
+          <div className="flex flex-col w-full">
             <img
               src="/img/platform-1.png"
-              className="w-full h-[250px] object-cover object-center"
+              className="w-full h-[220px] object-cover object-center"
               alt=""
             />
             <h2 className="text-center text-thunder text-lg font-inter">
@@ -57,32 +58,32 @@ export default function PlatformSlider() {
           </div>
         </SwiperSlide>
 
-        <SwiperSlide>
-          <div className="flex flex-col">
+        <SwiperSlide className="!w-[320px]">
+          <div className="flex flex-col w-full">
             <img
               src="/img/platform-1.png"
-              className="w-full h-[250px] object-cover object-center"
+              className="w-full h-[220px] object-cover object-center"
               alt=""
             />
 
             <h2 className="text-center text-thunder text-lg font-inter">CTV</h2>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex flex-col">
+        <SwiperSlide className="!w-[320px]">
+          <div className="flex flex-col w-full">
             <img
               src="/img/platform-2.png"
-              className="w-full h-[250px] object-cover object-center"
+              className="w-full h-[220px] object-cover object-center"
               alt=""
             />
             <h2 className="text-center text-thunder text-lg font-inter">OTT</h2>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex flex-col">
+        <SwiperSlide className="!w-[320px]">
+          <div className="flex flex-col w-full">
             <img
               src="/img/platform-1.png"
-              className="w-full h-[250px] object-cover object-center"
+              className="w-full h-[220px] object-cover object-center"
               alt=""
             />
             <h2 className="text-center text-thunder text-lg font-inter">
