@@ -22,7 +22,7 @@ const ContactUs = () => {
         </div>
         <ContactForm />
       </div>{" "}
-      <SuccessAction />
+
     </section>
   );
 };
