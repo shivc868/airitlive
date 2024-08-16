@@ -1,6 +1,8 @@
 import Footer from "@/components/common/Footer";
 import Header from "@/components/common/Header";
 import ContactUs from "@/components/common/contactus/ContactUs";
+import LatestInsight from "@/components/home/LatestInsight";
+import ServiceCard from "@/components/services/ServiceCard";
 import ServicesDetails from "@/components/services/ServicesDetails";
 import ServicesHero from "@/components/services/ServicesHero";
 import ServicesLogos from "@/components/services/ServicesLogos";
@@ -17,6 +19,8 @@ const ServicesPage = () => {
           <ServicesLogos />
         </div>
         <ServicesDetails />
+        <ServiceCard />
+        <LatestInsight heading="Explore Our Case Studies" />
         <Testimonial />
         <ContactUs />
         <Footer />
