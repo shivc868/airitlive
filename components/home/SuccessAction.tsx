@@ -5,7 +5,15 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Parallax, Pagination, Navigation } from "swiper/modules";
 
-const slidesData = [
+// Define types for the slide data
+interface SlideData {
+  logo: string;
+  partner: string;
+  percentage: string;
+  description: string;
+}
+
+const slidesData: SlideData[] = [
   {
     logo: "path-to-your-logo1.png",
     partner: "Major League Partner",
@@ -26,8 +34,8 @@ const slidesData = [
   },
 ];
 
-export default function SuccessAction() {
-  const swiperRef = useRef(null);
+const SuccessAction: React.FC = () => {
+  const swiperRef = useRef<any>(null); // Use 'any' or a more specific type if you prefer
 
   return (
     <div className="max-w-[738px] w-full mx-auto">
@@ -50,7 +58,7 @@ export default function SuccessAction() {
             <div
               className={`flex items-center justify-between py-[37px] px-[50px] rounded-[22px] ${
                 index % 2 === 0 ? "bg-lightPurple" : "bg-purple"
-              }  `}
+              }`}
             >
               <div className="max-w-[199px] w-full border border-red-900 h-20">
                 <img
@@ -230,4 +238,6 @@ export default function SuccessAction() {
       </Swiper>
     </div>
   );
-}
+};
+
+export default SuccessAction;
