@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { CloseIcon, MenuIcon } from "./AppIcons";
 import HeaderLinks from "./HeaderLinks";
 import { styles } from "./style";
+import Link from "next/link";
 
 interface IHeaderProps {
   additionalclass: string;
@@ -23,16 +24,20 @@ const Header = (props: IHeaderProps) => {
         <div className={styles.container}>
           <nav className="py-4">
             <header className="flex items-center justify-between">
-              <img
-                src="/img/logo.png"
-                className="w-[80px] lg:w-[100px]"
-                alt=""
-              />
+              <Link href="/">
+                <img
+                  src="/img/logo.png"
+                  className="w-[80px] lg:w-[100px]"
+                  alt=""
+                />
+              </Link>
               <div className="hidden lg:flex items-center gap-16 justify-between">
                 <div className="flex gap-10">
                   <HeaderLinks />
                 </div>
-                <button className="btn-primary">Get in touch</button>
+                <Link href="/contact">
+                  <button className="btn-primary">Get in touch</button>
+                </Link>
               </div>
 
               <button
@@ -51,7 +56,9 @@ const Header = (props: IHeaderProps) => {
           <div className="lg:hidden py-4 left-0 flex justify-center items-center absolute bg-main-bg top-[83px] z-0 w-full">
             <div className="flex items-center justify-center gap-6 flex-col">
               <HeaderLinks />
-              <button className="btn-primary">Get in touch</button>
+              <Link href="/contact">
+                <button className="btn-primary">Get in touch</button>
+              </Link>
             </div>
           </div>
         )}

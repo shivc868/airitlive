@@ -146,3 +146,59 @@ export const testimonialData = [
       "Airit's commitment to a greener digital ecosystem is unmatched. We're excited to be a part of this movement.",
   },
 ];
+export const insightsData = [
+  {
+    id: 1,
+    title:
+      "Programmatic Advertising in a Cookieless World: Solutions & Strategies",
+    description:
+      "By now, we've all heard that Google is once again pushing back the retirement of third-party cookies in its Chrome browser.",
+    author: "Matthew Workman",
+    date: "July 3, 2024",
+  },
+  {
+    id: 2,
+    title:
+      "Programmatic Advertising in a Cookieless World: Solutions & Strategies",
+    description:
+      "By now, we've all heard that Google is once again pushing back the retirement of third-party cookies in its Chrome browser.",
+    author: "Matthew Workman",
+    date: "July 3, 2024",
+  },
+  {
+    id: 3,
+    title:
+      "Programmatic Advertising in a Cookieless World: Solutions & Strategies",
+    description:
+      "By now, we've all heard that Google is once again pushing back the retirement of third-party cookies in its Chrome browser.",
+    author: "Matthew Workman",
+    date: "July 3, 2024",
+  },
+  {
+    id: 4,
+    title:
+      "Programmatic Advertising in a Cookieless World: Solutions & Strategies",
+    description:
+      "By now, we've all heard that Google is once again pushing back the retirement of third-party cookies in its Chrome browser.",
+    author: "Matthew Workman",
+    date: "July 3, 2024",
+  },
+  {
+    id: 5,
+    title:
+      "Programmatic Advertising in a Cookieless World: Solutions & Strategies",
+    description:
+      "By now, we've all heard that Google is once again pushing back the retirement of third-party cookies in its Chrome browser.",
+    author: "Matthew Workman",
+    date: "July 3, 2024",
+  },
+  {
+    id: 6,
+    title:
+      "Programmatic Advertising in a Cookieless World: Solutions & Strategies",
+    description:
+      "By now, we've all heard that Google is once again pushing back the retirement of third-party cookies in its Chrome browser.",
+    author: "Matthew Workman",
+    date: "July 3, 2024",
+  },
+];

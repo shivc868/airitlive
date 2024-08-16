@@ -31,7 +31,7 @@ export default function Home() {
         <SuccessAction />
         <Testimonial />
         <ContactUs />
-        <LatestInsight />
+        <LatestInsight heading="Latest Insights From Airit" />
         <Footer />
       </main>
     </>

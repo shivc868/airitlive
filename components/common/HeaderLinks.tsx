@@ -12,12 +12,12 @@ const HeaderLinks = () => {
     {
       id: 2,
       title: "Solutions",
-      link: "/solutions",
+      link: "/#solutions",
     },
     {
       id: 3,
       title: "Resources",
-      link: "/resources",
+      link: "/#resources",
     },
     {
       id: 4,

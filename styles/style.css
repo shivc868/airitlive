@@ -3,7 +3,9 @@
   font-family: helvetica-bold;
   src: url("../public/fonts/Helvetica\ CE\ Bold.otf");
 }
-
+body {
+  scroll-behavior: smooth !important;
+}
 .gradient-hero-main-text {
   background: linear-gradient(92deg, #6e00ae 1.72%, #290040 98.28%);
   background-clip: text;

@@ -102,7 +102,7 @@ const ProblemSolutions = () => {
 
   const handleSlideChange = (swiper: any) => {};
   return (
-    <section className="px-4">
+    <section id="solutions" className="px-4">
       <div className={styles.container}>
         <h2 className="section-heading py-14 text-center">Problems we solve</h2>
         <div className="flex overflow-hidden sm:px-8 gap-5 flex-wrap">

@@ -1,6 +1,7 @@
 import React from "react";
 import DataSummaryMetrics from "./DataSummaryMetrics";
 import { styles } from "../common/style";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -20,7 +21,9 @@ const Hero = () => {
           Revolutionizing monetization for Sports, News, and Entertainment.
         </p>
         <div className="flex sm:block justify-center">
-          <button className="btn-primary">Get in touch</button>
+          <Link href="/contact">
+            <button className="btn-primary">Get in touch</button>
+          </Link>
         </div>
       </div>
 

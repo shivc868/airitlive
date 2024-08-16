@@ -1,4 +1,5 @@
-import { styles } from '../common/style'
+import Link from "next/link";
+import { styles } from "../common/style";
 
 const ServicesHero = () => {
   return (
@@ -9,19 +10,24 @@ const ServicesHero = () => {
         >
           <h1 className="flex flex-col text-[30px] sm:text-[50px] lg:text-[68px] leading-[1] font-helvetica-bold font-bold tracking-[5px] text-center">
             <span className="gradient-hero-main-text text-center leading-[1] ">
-              Monetize Your CTV Platform
+              One AI Partner
+            </span>
+            <span className="gradient-hero-main-text text-center leading-[1] ">
+              Three Media Powerhouses
             </span>
           </h1>
           <p className="text-lg text-center sm:text-[24px] lg:text-[28px] text-plum font-lato font-medium leading-[1.2]">
             Revolutionizing monetization for Sports, News, and Entertainment.
           </p>
           <div className="flex sm:block justify-center mt-12">
-            <button className="btn-primary">Get in touch</button>
+            <Link href="/contact">
+              <button className="btn-primary">Get in touch</button>
+            </Link>
           </div>
         </div>
       </header>
     </>
-  )
-}
+  );
+};
 
-export default ServicesHero
+export default ServicesHero;

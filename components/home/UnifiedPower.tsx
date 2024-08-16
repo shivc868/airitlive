@@ -2,6 +2,7 @@ import React from "react";
 import UnifiedCard from "./UnifiedCard";
 import { ForCasting, HandShakeIcon, SharedIcon } from "../common/Icons";
 import SecondaryButton from "../common/SecondaryButton";
+import Link from "next/link";
 
 const CardData = [
   {
@@ -35,7 +36,9 @@ const UnifiedPower: React.FC = () => {
         </div>
       </div>
       <div className="flex justify-center mt-12">
-        <SecondaryButton className="mt-11">Contact Us</SecondaryButton>
+        <Link href="/contact">
+          <SecondaryButton className="mt-11">Contact Us</SecondaryButton>
+        </Link>
       </div>
     </section>
   );
