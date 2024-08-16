@@ -294,3 +294,19 @@ export const MdIcon = () => (
     />
   </svg>
 );
+export const RightArrow = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="11"
+    height="12"
+    viewBox="0 0 11 12"
+    fill="none"
+    className="ml-0.5 mb-[1px]"
+  >
+    <path
+      d="M1 0.976562L9 6.79474L1 11.1584"
+      stroke="white"
+      stroke-width="1.45455"
+    />
+  </svg>
+);

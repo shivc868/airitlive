@@ -2,6 +2,8 @@ import React from "react";
 import ContactForm from "./ContactForm";
 
 import SecondaryButton from "../SecondaryButton";
+import { RightArrow } from "../Icons";
+import SuccessAction from "@/components/home/SuccessAction";
 
 const ContactUs = () => {
   return (
@@ -11,10 +13,16 @@ const ContactUs = () => {
           <h3 className="text-lg sm:text-xl md:text-3xl lg:text-[40px] xl:text-[48px] lg:leading-[119%]">
             Ready to transform your media ecosystem?
           </h3>
-          <SecondaryButton className="">Become a partner</SecondaryButton>
+          <SecondaryButton className="" icon={true}>
+            Become a partner
+            <span className="w-[26px] h-[26px] bg-purple rounded-full flex items-center justify-center">
+              <RightArrow />
+            </span>
+          </SecondaryButton>
         </div>
         <ContactForm />
-      </div>
+      </div>{" "}
+      <SuccessAction />
     </section>
   );
 };

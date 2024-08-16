@@ -23,6 +23,7 @@ const config: Config = {
         "main-bg": "#F5E7FF",
         thunder: "#2D293E",
         purple: "#802BB1",
+        lightPurple: "#D3A2F0",
         plum: "#502C6D",
         "light-gray": "rgba(229,230,236,0.50)",
         honey: "#62217E",

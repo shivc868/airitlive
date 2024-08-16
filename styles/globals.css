@@ -18,3 +18,11 @@
     @apply text-sm bg-transparent placeholder:text-thunder text-black lg:text-base pt-1.5 pb-2.5 border-thunder focus:outline-none border-b  font-light font-inter;
   }
 }
+.prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  display: none !important;
+}
+.prev.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  display: none !important;
+}

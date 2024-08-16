@@ -19,3 +19,9 @@
   .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: -40px !important;
 }
+.swiper-button-next::after {
+  display: none !important;
+}
+.swiper-button-prev::after {
+  display: none !important;
+}
