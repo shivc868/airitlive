@@ -10,6 +10,10 @@ import UnifiedPower from "@/components/home/UnifiedPower";
 import Testimonial from "@/components/testimonial/Testimonial";
 import ProblemSolutions from "@/components/home/ProblemSolutions";
 import WhyChoose from "@/components/home/WhyChoose";
+import { Inter } from "next/font/google";
+import LatestInsight from "@/components/home/LatestInsight";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -27,6 +31,7 @@ export default function Home() {
         <SuccessAction />
         <Testimonial />
         <ContactUs />
+        <LatestInsight />
         <Footer />
       </main>
     </>
