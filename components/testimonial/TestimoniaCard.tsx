@@ -16,10 +16,10 @@ interface TestimoniaCardProps {
 
 const TestimoniaCard: React.FC<TestimoniaCardProps> = ({ data }) => {
   return (
-    <article className="bg-white gap-3 font-inter p-5 mx-2 sm:mx-4 xl:mx-6 rounded-[6.714px] max-w-[340px] lg:max-w-[450px] flex flex-col justify-between">
+    <article className="bg-white cursor-pointer gap-3 font-inter p-5 mx-2 sm:mx-2 xl:mx-4rounded-[6.714px] max-w-[340px] w-full lg:max-w-[440px] flex flex-col justify-between">
       <MdIcon />
       <div className="flex-1">
-        <p className="text-aswadBlack text-[10px] sm:text-xs lg:text-sm  leading-[170%]">
+        <p className="text-aswadBlack text-[14px] sm:text-[16px] lg:text-[18px] leading-[170%]">
           {data.feedback}
         </p>
       </div>
@@ -32,8 +32,8 @@ const TestimoniaCard: React.FC<TestimoniaCardProps> = ({ data }) => {
           src={data.image}
         />
         <div>
-          <h5 className="text-[10px] lg:text-xs font-bold">{data.name}</h5>
-          <h6 className="text-[10px] text-aswadBlack">
+          <h5 className="text-[14px] lg:text-base font-bold">{data.name}</h5>
+          <h6 className="text-[12px] text-aswadBlack">
             {data.role} <br /> {data.company}
           </h6>
         </div>

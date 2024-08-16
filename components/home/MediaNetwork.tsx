@@ -16,7 +16,7 @@ const MediaNetwork = () => {
             alt={network.alt}
             width={171}
             height={99}
-            className="object-contain h-full w-full rounded-xl overflow-hidden md:rounded-[18px]"
+            className="object-contain hover:scale-[0.94] cursor-pointer transition-all duration-200 h-full w-full rounded-xl overflow-hidden md:rounded-[18px]"
           />
         ))}
       </div>
