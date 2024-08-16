@@ -21,7 +21,10 @@ const CardData = [
 const UnifiedPower: React.FC = () => {
   return (
     <section className="max-w-[1182px] px-4 w-full mx-auto">
-      <div className="flex flex-wrap gap-8  justify-between items-center w-full">
+      <h3 className="section-heading text-center">
+        Unified Power for All Media
+      </h3>
+      <div className="flex flex-wrap gap-5 md:gap-8  justify-center lg:justify-between items-center w-full mt-12">
         {CardData.map((data, index) => (
           <UnifiedCard key={index} data={data} />
         ))}
