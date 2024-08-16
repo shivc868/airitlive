@@ -7,16 +7,16 @@ const Amplify = () => {
   return (
     <section className="px-4 py-24">
       <div className={styles.container}>
-        <div className="flex items-center justify-between gap-3">
+        <div className="flex lg:flex-row flex-col items-center justify-between sm:gap-10 gap-6 md:gap-14 lg:gap-3">
           <div className="flex flex-col gap-3">
             <h2 className="section-heading">Amplify your Content</h2>
-            <div>
+            <div className="lg:block hidden">
               <button className="btn-primary">Know more</button>
             </div>
           </div>
 
-          <div className="flex items-center justify-center">
-            <div className="flex flex-col gap-12">
+          <div className="flex sm:flex-row flex-col items-center gap-3 lg:gap-0 justify-center">
+            <div className="flex flex-col sm:flex-row lg:flex-col gap-3 lg:gap-12">
               <PerformanceMetricsCards
                 icon={<NewsIcon />}
                 percentage="95+"
@@ -38,6 +38,10 @@ const Amplify = () => {
                 description="better viewer retention during binge sessions"
               />
             </div>
+          </div>
+
+          <div className="block lg:hidden">
+            <button className="btn-primary">Know more</button>
           </div>
         </div>
       </div>
