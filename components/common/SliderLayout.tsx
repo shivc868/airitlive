@@ -10,12 +10,16 @@ interface SuccessActionProps {
   children: React.ReactNode;
   classname: React.ReactNode;
   paginationClass?: string;
+  prevIcon?: React.ReactNode;
+  nextIcon?: React.ReactNode;
 }
 
 const SliderLayout: React.FC<SuccessActionProps> = ({
   children,
   classname,
   paginationClass,
+  prevIcon,
+  nextIcon,
 }) => {
   const swiperRef = useRef<any>(null);
   const [isBeginning, setIsBeginning] = useState(true);
@@ -51,12 +55,12 @@ const SliderLayout: React.FC<SuccessActionProps> = ({
         ))}
         <div className="flex items-center">
           <button
-            className={`swiper-button-prev rotate-180 ${
+            className={`swiper-button-prev  rotate-180 ${
               isBeginning ? "opacity-0 pointer-events-none" : ""
             }`}
             onClick={() => swiperRef.current?.slidePrev()}
           >
-            <PrevButtton />
+            {prevIcon || <PrevButtton />}
           </button>
           <button
             className={`swiper-button-next ${
@@ -64,7 +68,7 @@ const SliderLayout: React.FC<SuccessActionProps> = ({
             }`}
             onClick={() => swiperRef.current?.slideNext()}
           >
-            <NextButton />
+            {nextIcon || <NextButton />}
           </button>
         </div>
       </Swiper>

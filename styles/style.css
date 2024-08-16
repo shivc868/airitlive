@@ -35,7 +35,6 @@
   display: none !important;
 }
 
-/* Pagination style one - Default */
 .pagination-style-one .swiper-pagination-bullet {
   background-color: #50017e;
   width: 15px;
@@ -44,17 +43,34 @@
 }
 
 .pagination-style-one .swiper-pagination-bullet-active {
-  background-color: #2d293e;
-}
-
-.pagination-style-two .swiper-pagination-bullet-active {
   background-color: #50017e;
 }
 
+.pagination-style-two .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+.pagination-style-two .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.pagination-style-two .swiper-pagination-bullet-active {
+  background-color: #2d293e;
+  width: 20px;
+  height: 20px;
+}
+
 /* Media query for mobile screens */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .pagination-style-one .swiper-pagination-bullet {
     width: 7px;
     height: 7px;
+  }
+  .pagination-style-two .swiper-pagination-bullet {
+    width: 9px;
+    height: 9px;
   }
 }
