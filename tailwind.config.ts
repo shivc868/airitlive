@@ -30,6 +30,7 @@ const config: Config = {
         aswadBlack: "#141619",
         lavender: "#D6CDF7",
         lavenderIndigo: "rgba(59,28,148,0.25)",
+        chineseBlack: "#0C1100",
       },
     },
   },

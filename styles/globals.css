@@ -18,11 +18,20 @@
     @apply text-sm bg-transparent placeholder:text-thunder text-black lg:text-base pt-1.5 pb-2.5 border-thunder focus:outline-none border-b  font-light font-inter;
   }
 }
-.prev.swiper-button-disabled,
+/* .prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
   display: none !important;
 }
 .prev.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled {
   display: none !important;
+} */
+.swiper-backface-hidden .swiper-slide {
+  height: auto !important;
+}
+.gradient-text {
+  background: linear-gradient(104deg, #0c1100 -9.62%, #50017e 102.86%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

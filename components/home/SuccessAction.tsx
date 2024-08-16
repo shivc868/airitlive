@@ -1,11 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Parallax, Pagination, Navigation } from "swiper/modules";
 
-// Define types for the slide data
 interface SlideData {
   logo: string;
   partner: string;
@@ -15,73 +14,87 @@ interface SlideData {
 
 const slidesData: SlideData[] = [
   {
-    logo: "path-to-your-logo1.png",
+    logo: "/img/red-robin.webp",
     partner: "Major League Partner",
     percentage: "50%",
     description: "uplift in per-game ad revenue",
   },
   {
-    logo: "path-to-your-logo2.png",
-    partner: "Global Partner",
+    logo: "/img/red-robin.webp",
+    partner: "24/7 News Network",
     percentage: "40%",
-    description: "increase in brand visibility",
+    description: "improvement in breaking news monetization",
   },
   {
-    logo: "path-to-your-logo3.png",
-    partner: "National Partner",
-    percentage: "30%",
-    description: "growth in fan engagement",
+    logo: "/img/red-robin.webp",
+    partner: "Streaming Giant",
+    percentage: "80%",
+    description: "increase in completed ad views",
   },
 ];
 
 const SuccessAction: React.FC = () => {
-  const swiperRef = useRef<any>(null); // Use 'any' or a more specific type if you prefer
+  const swiperRef = useRef<any>(null);
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
+
+  const handleSlideChange = (swiper: any) => {
+    setIsBeginning(swiper.isBeginning);
+    setIsEnd(swiper.isEnd);
+  };
 
   return (
-    <div className="max-w-[738px] w-full mx-auto">
+    <div className="max-w-[846px] h-full rounded-[22px] w-full mx-auto">
       <Swiper
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
-        style={{
-          "--swiper-navigation-color": "#000",
-          "--swiper-pagination-color": "transparent",
-        }}
+        spaceBetween={37}
+        slidesPerView={1.16}
+        centeredSlides={true}
+        onSlideChange={handleSlideChange}
         speed={600}
         parallax={true}
-        pagination={{ clickable: true }}
-        navigation={false} // Disable built-in navigation
+        navigation={true}
         modules={[Parallax, Pagination, Navigation]}
       >
         {slidesData.map((slide, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide className="h-full !py-16" key={index}>
             <div
-              className={`flex items-center justify-between py-[37px] px-[50px] rounded-[22px] ${
-                index % 2 === 0 ? "bg-lightPurple" : "bg-purple"
+              className={`flex items-center justify-between py-[37px] px-[50px] rounded-[22px] shadow-[-8px_9px_8.1px_0px_rgba(0,0,0,0.25)] h-full ${
+                index % 3 === 0
+                  ? "bg-purple"
+                  : index % 3 === 1
+                  ? "bg-lightPurple"
+                  : "bg-red-900"
               }`}
             >
-              <div className="max-w-[199px] w-full border border-red-900 h-20">
+              <div className="max-w-[199px] w-full h-20">
                 <img
                   src={slide.logo}
                   alt={`${slide.partner} Logo`}
-                  className="w-full"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <div className="w-full max-w-[309px] border-green-900 border space-y-[7px]">
-                <h3 className="text-black text-xl font-semibold">
+              <div className="w-full flex flex-col max-w-[310px] items-center space-y-2">
+                <h3 className="text-chineseBlack text-nowrap text-center font-lato text-lg sm:text-xl xl:text-[32px] md:text-2xl font-semibold">
                   {slide.partner}
                 </h3>
-                <p className="text-4xl font-bold text-black">
+                <p className="text-4xl sm:text-5xl md:text-6xl xl:text-[72px] font-black gradient-text">
                   {slide.percentage}
                 </p>
-                <p className="text-black">{slide.description}</p>
+                <p className="text-sm sm:text-base md:text-lg xl:text-2xl text-center text-chineseBlack font-lato">
+                  {slide.description}
+                </p>
               </div>
             </div>
           </SwiperSlide>
         ))}
         <div className="flex items-center">
           <button
-            className="swiper-button-prev rotate-180"
+            className={`swiper-button-prev rotate-180 ${
+              isBeginning ? "opacity-0 pointer-events-none" : ""
+            }`}
             onClick={() => swiperRef.current?.slidePrev()}
           >
             <svg
@@ -158,7 +171,9 @@ const SuccessAction: React.FC = () => {
             </svg>
           </button>
           <button
-            className="swiper-button-next"
+            className={`swiper-button-next ${
+              isEnd ? "opacity-0 pointer-events-none" : ""
+            }`}
             onClick={() => swiperRef.current?.slideNext()}
           >
             <svg
