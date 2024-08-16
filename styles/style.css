@@ -34,3 +34,27 @@
 .success-in-action .swiper-button-prev::after {
   display: none !important;
 }
+
+/* Pagination style one - Default */
+.pagination-style-one .swiper-pagination-bullet {
+  background-color: #50017e;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.pagination-style-one .swiper-pagination-bullet-active {
+  background-color: #2d293e;
+}
+
+.pagination-style-two .swiper-pagination-bullet-active {
+  background-color: #50017e;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 640px) {
+  .pagination-style-one .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+  }
+}

@@ -1,19 +1,7 @@
-import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Parallax, Pagination, Navigation } from "swiper/modules";
-import { NextButton, PrevButtton } from "../common/Icons";
+import React from "react";
+import SliderLayout from "../common/SliderLayout";
 
-interface SlideData {
-  logo: string;
-  partner: string;
-  percentage: string;
-  description: string;
-}
-
-const slidesData: SlideData[] = [
+const slidesData = [
   {
     logo: "/img/red-robin.webp",
     partner: "Major League Partner",
@@ -34,83 +22,40 @@ const slidesData: SlideData[] = [
   },
 ];
 
-const SuccessAction: React.FC = () => {
-  const swiperRef = useRef<any>(null);
-  const [isBeginning, setIsBeginning] = useState(true);
-  const [isEnd, setIsEnd] = useState(false);
-
-  const handleSlideChange = (swiper: any) => {
-    setIsBeginning(swiper.isBeginning);
-    setIsEnd(swiper.isEnd);
-  };
-
-  return (
-    <div className="max-w-[846px] h-full rounded-[22px] w-full mx-auto success-in-action">
-      <Swiper
-        onSwiper={(swiper) => {
-          swiperRef.current = swiper;
-        }}
-        spaceBetween={37}
-        slidesPerView={1.16}
-        centeredSlides={true}
-        onSlideChange={handleSlideChange}
-        speed={600}
-        parallax={true}
-        modules={[Parallax, Pagination, Navigation]}
+const App = () => (
+  <SliderLayout classname={undefined} paginationClass="pagination-style-one">
+    {slidesData.map((slide, index) => (
+      <div
+        key={index}
+        className={`flex items-center justify-between py-4 md:py-[37px] px-5 md:px-[50px] rounded-[22px] shadow-[-8px_9px_8.1px_0px_rgba(0,0,0,0.25)] h-full ${
+          slide.partner === "Major League Partner"
+            ? "bg-lightPurple"
+            : slide.partner === "24/7 News Network"
+            ? "bg-[#B84FF4]"
+            : "bg-[#A320EE]"
+        }`}
       >
-        {slidesData.map((slide, index) => (
-          <SwiperSlide className="h-full py-12 md:!py-16" key={index}>
-            <div
-              className={`flex items-center justify-between py-4 md:py-[37px] px-5 md:px-[50px] rounded-[22px] shadow-[-8px_9px_8.1px_0px_rgba(0,0,0,0.25)] h-full ${
-                index % 3 === 0
-                  ? "bg-lightPurple"
-                  : index % 3 === 1
-                  ? "bg-[#B84FF4]"
-                  : "bg-[#A320EE]"
-              }`}
-            >
-              <div className="max-w-[199px] w-fit sm:w-full h-11 lg:h-20">
-                <img
-                  src={slide.logo}
-                  alt={`${slide.partner} Logo`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="w-full flex flex-col max-w-[310px] items-center space-y-2">
-                <h3 className="text-chineseBlack text-nowrap text-center font-lato text-base sm:text-xl xl:text-[32px] md:text-2xl font-semibold">
-                  {slide.partner}
-                </h3>
-                <p className="text-3xl  sm::text-5xl lg:text-6xl xl:text-[72px] font-black gradient-text">
-                  {slide.percentage}
-                </p>
-                <p className="text-xs sm:text-base lg:text-lg xl:text-2xl text-center text-chineseBlack font-lato">
-                  {slide.description}
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-        <div className="flex items-center">
-          <button
-            className={`swiper-button-prev rotate-180 ${
-              isBeginning ? "opacity-0 pointer-events-none" : ""
-            }`}
-            onClick={() => swiperRef.current?.slidePrev()}
-          >
-            <PrevButtton />
-          </button>
-          <button
-            className={` swiper-button-next ${
-              isEnd ? "opacity-0 pointer-events-none" : ""
-            }`}
-            onClick={() => swiperRef.current?.slideNext()}
-          >
-            <NextButton />
-          </button>
+        <div className="max-w-[199px] w-fit sm:w-full h-11 lg:h-20">
+          <img
+            src={slide.logo}
+            alt={`${slide.partner} Logo`}
+            className="w-full h-full object-cover"
+          />
         </div>
-      </Swiper>
-    </div>
-  );
-};
+        <div className="w-full flex flex-col max-w-[310px] items-center space-y-2">
+          <h3 className="text-chineseBlack text-nowrap text-center font-lato text-base sm:text-xl xl:text-[32px] md:text-2xl font-semibold">
+            {slide.partner}
+          </h3>
+          <p className="text-3xl sm:text-5xl lg:text-6xl xl:text-[72px] font-black gradient-text">
+            {slide.percentage}
+          </p>
+          <p className="text-xs sm:text-base lg:text-lg xl:text-2xl text-center text-chineseBlack font-lato">
+            {slide.description}
+          </p>
+        </div>
+      </div>
+    ))}
+  </SliderLayout>
+);
 
-export default SuccessAction;
+export default App;
