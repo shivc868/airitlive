@@ -6,6 +6,7 @@ import Hero from "@/components/home/Hero";
 import MediaNetwork from "@/components/home/MediaNetwork";
 import Platforms from "@/components/home/Platforms";
 import SuccessAction from "@/components/home/SuccessAction";
+import UnifiedPower from "@/components/home/UnifiedPower";
 import Testimonial from "@/components/testimonial/Testimonial";
 import { Inter } from "next/font/google";
 
@@ -21,6 +22,7 @@ export default function Home() {
         <Amplify />
         <Platforms />
         <MediaNetwork />
+        <UnifiedPower />
         <SuccessAction />
         <Testimonial />
         <ContactUs />
