@@ -1,4 +1,5 @@
 import ContactUs from '@/components/common/contactus/ContactUs'
+import Faqs from '@/components/common/Faqs'
 import Footer from '@/components/common/Footer'
 import Header from '@/components/common/Header'
 import ServicesDetails from '@/components/services/ServicesDetails'
@@ -18,6 +19,7 @@ const ServicesPage = () => {
         </div>
         <ServicesDetails />
         <Testimonial />
+        <Faqs />
         <ContactUs />
         <Footer />
       </main>
