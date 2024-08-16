@@ -44,7 +44,7 @@ const SuccessAction: React.FC = () => {
   };
 
   return (
-    <div className="max-w-[846px] h-full rounded-[22px] w-full mx-auto">
+    <div className="max-w-[846px] h-full rounded-[22px] w-full mx-auto success-in-action">
       <Swiper
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
@@ -55,7 +55,6 @@ const SuccessAction: React.FC = () => {
         onSlideChange={handleSlideChange}
         speed={600}
         parallax={true}
-        navigation={true}
         modules={[Parallax, Pagination, Navigation]}
       >
         {slidesData.map((slide, index) => (
@@ -92,7 +91,7 @@ const SuccessAction: React.FC = () => {
         ))}
         <div className="flex items-center">
           <button
-            className={`swiper-button-prev rotate-180 ${
+            className={`custom-swiper-button-prev swiper-button-prev rotate-180 ${
               isBeginning ? "opacity-0 pointer-events-none" : ""
             }`}
             onClick={() => swiperRef.current?.slidePrev()}
@@ -171,7 +170,7 @@ const SuccessAction: React.FC = () => {
             </svg>
           </button>
           <button
-            className={`swiper-button-next ${
+            className={`custom-swiper-button-next swiper-button-next ${
               isEnd ? "opacity-0 pointer-events-none" : ""
             }`}
             onClick={() => swiperRef.current?.slideNext()}
