@@ -1,6 +1,19 @@
-import React from "react";
+"use client";
+
+import React, { useRef, useState } from "react";
 import { styles } from "../common/style";
 import { ArrowIcon } from "../common/AppIcons";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// import required modules
+import { Parallax, Pagination, Navigation } from "swiper/modules";
 
 const ProblemSolutions = () => {
   const problemData = [
@@ -85,40 +98,227 @@ const ProblemSolutions = () => {
         "Air1Live provides detailed and transparent reporting on ad performance, empowering you with the insights needed to make informed decisions and optimize your revenue.",
     },
   ];
+  const swiperRef = useRef<any>(null);
+
+  const handleSlideChange = (swiper: any) => {};
   return (
     <section className="px-4">
       <div className={styles.container}>
         <h2 className="section-heading py-14 text-center">Problems we solve</h2>
-        <div className="flex gap-5 flex-wrap">
-          {problemData.map((problem, index) => (
-            <div
-              key={index}
-              className="max-w-[379px] cursor-pointer flex flex-col overflow-hidden group relative bg-[#C594F6] rounded-lg w-full"
-            >
-              <div className="transition-all flex-col  flex h-full duration-300 group-hover:-translate-y-[calc(100%-60px)] relative z-10">
-                <div className="pt-10 !bg-black justify-end grow problem-solution-bg-gradient flex flex-col gap-24">
-                  <h3 className="text-[30px] px-4 leading-[1.2] text-center text-white opacity-95 font-lato font-bold">
-                    {problem.title}
-                  </h3>
+        <div className="flex overflow-hidden px-8 gap-5 flex-wrap">
+          <Swiper
+            className="mySwiper max-w-full !overflow-visible !pb-10"
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+            }}
+            slidesPerView={"auto"}
+            spaceBetween={20}
+            loop={true}
+            speed={600}
+            parallax={true}
+            navigation={true}
+            onSlideChange={handleSlideChange}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Parallax, Pagination, Navigation]}
+          >
+            {problemData.map((problem, index) => (
+              <SwiperSlide
+                key={index}
+                className="!w-[320px] sm:!w-[350px] md:!w-[379px] min-h-full"
+              >
+                <div className="max-w-full min-h-full max-h-full min-w-full cursor-pointer flex flex-col overflow-hidden group relative bg-[#C594F6] rounded-lg w-full">
+                  <div className="transition-all flex-col grow flex h-full duration-300 group-hover:-translate-y-[calc(100%-60px)] relative z-10">
+                    <div className="pt-10 !bg-black justify-end grow problem-solution-bg-gradient flex flex-col gap-24">
+                      <h3 className="text-[30px] px-4 leading-[1.2] text-center text-white opacity-95 font-lato font-bold">
+                        {problem.title}
+                      </h3>
 
-                  <p className="text-white tracking-[0.21px] p-3 text-[18px] font-lato leading-[1.2]">
-                    {problem.description}
-                  </p>
+                      <p className="text-white tracking-[0.21px] p-3 text-[18px] font-lato leading-[1.2]">
+                        {problem.description}
+                      </p>
+                    </div>
+                    <div className="w-full origin-center duration-300 transition-all group-hover:rotate-180 min-h-[60px] flex justify-center items-center">
+                      <ArrowIcon />
+                    </div>
+                  </div>
+                  <div className="absolute top-0 left-0 h-full w-full z-0 gap-4 flex flex-col justify-center items-center">
+                    <h2 className="font-lato gradient-hero-main-text text-[40px] pt-10 leading-[1.2">
+                      {problem.solutionTitle}
+                    </h2>
+                    <p className="text-white text-center leading-[1.2] text-base p-4">
+                      {problem.solutionDescription}
+                    </p>
+                  </div>
                 </div>
-                <div className="w-full origin-center duration-300 transition-all group-hover:rotate-180 min-h-[60px] flex justify-center items-center">
-                  <ArrowIcon />
-                </div>
-              </div>
-              <div className="absolute top-0 left-0 h-full w-full z-0 gap-4 flex flex-col justify-center items-center">
-                <h2 className="font-lato gradient-hero-main-text text-[40px] pt-10 leading-[1.2">
-                  {problem.solutionTitle}
-                </h2>
-                <p className="text-white text-center leading-[1.2] text-base p-4">
-                  {problem.solutionDescription}
-                </p>
-              </div>
+              </SwiperSlide>
+            ))}
+            <div className="flex items-center">
+              <button
+                className={`swiper-button-prev rotate-180 !left-[-25px]`}
+                onClick={() => swiperRef.current?.slidePrev()}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="44"
+                  height="44"
+                  viewBox="0 0 44 44"
+                  fill="none"
+                >
+                  <g filter="url(#filter0_di_76_1697)">
+                    <circle cx="22" cy="18" r="17" fill="#2D293E" />
+                  </g>
+                  <path
+                    d="M18.5 11L28.5 18L18 24"
+                    stroke="white"
+                    strokeWidth="2"
+                  />
+                  <defs>
+                    <filter
+                      id="filter0_di_76_1697"
+                      x="0"
+                      y="0"
+                      width="44"
+                      height="44"
+                      filterUnits="userSpaceOnUse"
+                      colorInterpolationFilters="sRGB"
+                    >
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix
+                        in="SourceAlpha"
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha"
+                      />
+                      <feOffset dy="4" />
+                      <feGaussianBlur stdDeviation="2.5" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in2="BackgroundImageFix"
+                        result="effect1_dropShadow_76_1697"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_dropShadow_76_1697"
+                        result="shape"
+                      />
+                      <feColorMatrix
+                        in="SourceAlpha"
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha"
+                      />
+                      <feOffset dy="4" />
+                      <feGaussianBlur stdDeviation="1.1" />
+                      <feComposite
+                        in2="hardAlpha"
+                        operator="arithmetic"
+                        k2="-1"
+                        k3="1"
+                      />
+                      <feColorMatrix
+                        type="matrix"
+                        values="0 0 0 0 0.681667 0 0 0 0 0.67485 0 0 0 0 0.67485 0 0 0 0.25 0"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in2="shape"
+                        result="effect2_innerShadow_76_1697"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+              </button>
+              <button
+                className={`swiper-button-next !right-[-25px]`}
+                onClick={() => swiperRef.current?.slideNext()}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="44"
+                  height="44"
+                  viewBox="0 0 44 44"
+                  fill="none"
+                >
+                  <g filter="url(#filter0_di_76_1697)">
+                    <circle cx="22" cy="18" r="17" fill="#2D293E" />
+                  </g>
+                  <path
+                    d="M18.5 11L28.5 18L18 24"
+                    stroke="white"
+                    strokeWidth="2"
+                  />
+                  <defs>
+                    <filter
+                      id="filter0_di_76_1697"
+                      x="0"
+                      y="0"
+                      width="44"
+                      height="44"
+                      filterUnits="userSpaceOnUse"
+                      colorInterpolationFilters="sRGB"
+                    >
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix
+                        in="SourceAlpha"
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha"
+                      />
+                      <feOffset dy="4" />
+                      <feGaussianBlur stdDeviation="2.5" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in2="BackgroundImageFix"
+                        result="effect1_dropShadow_76_1697"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_dropShadow_76_1697"
+                        result="shape"
+                      />
+                      <feColorMatrix
+                        in="SourceAlpha"
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha"
+                      />
+                      <feOffset dy="4" />
+                      <feGaussianBlur stdDeviation="1.1" />
+                      <feComposite
+                        in2="hardAlpha"
+                        operator="arithmetic"
+                        k2="-1"
+                        k3="1"
+                      />
+                      <feColorMatrix
+                        type="matrix"
+                        values="0 0 0 0 0.681667 0 0 0 0 0.67485 0 0 0 0 0.67485 0 0 0 0.25 0"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in2="shape"
+                        result="effect2_innerShadow_76_1697"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+              </button>
             </div>
-          ))}
+          </Swiper>
         </div>
       </div>
     </section>

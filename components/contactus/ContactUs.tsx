@@ -1,8 +1,8 @@
 import React from "react";
 import ContactForm from "./ContactForm";
 
-import SecondaryButton from "../SecondaryButton";
-import { RightArrow } from "../Icons";
+import SecondaryButton from "../common/SecondaryButton";
+import { RightArrow } from "../common/Icons";
 import SuccessAction from "@/components/home/SuccessAction";
 
 const ContactUs = () => {
