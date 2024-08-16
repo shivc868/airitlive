@@ -1,7 +1,10 @@
+import ContactUs from '@/components/common/contactus/ContactUs'
+import Footer from '@/components/common/Footer'
 import Header from '@/components/common/Header'
 import ServicesDetails from '@/components/services/ServicesDetails'
 import ServicesHero from '@/components/services/ServicesHero'
 import ServicesLogos from '@/components/services/ServicesLogos'
+import Testimonial from '@/components/testimonial/Testimonial'
 import React from 'react'
 
 const ServicesPage = () => {
@@ -14,6 +17,9 @@ const ServicesPage = () => {
           <ServicesLogos />
         </div>
         <ServicesDetails />
+        <Testimonial />
+        <ContactUs />
+        <Footer />
       </main>
     </>
   )
