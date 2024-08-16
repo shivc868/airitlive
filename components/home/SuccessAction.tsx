@@ -59,9 +59,9 @@ const SuccessAction: React.FC = () => {
         modules={[Parallax, Pagination, Navigation]}
       >
         {slidesData.map((slide, index) => (
-          <SwiperSlide className="h-full !py-16" key={index}>
+          <SwiperSlide className="h-full py-12 md:!py-16" key={index}>
             <div
-              className={`flex items-center justify-between py-[37px] px-[50px] rounded-[22px] shadow-[-8px_9px_8.1px_0px_rgba(0,0,0,0.25)] h-full ${
+              className={`flex items-center justify-between py-4 md:py-[37px] px-5 md:px-[50px] rounded-[22px] shadow-[-8px_9px_8.1px_0px_rgba(0,0,0,0.25)] h-full ${
                 index % 3 === 0
                   ? "bg-lightPurple"
                   : index % 3 === 1
@@ -69,7 +69,7 @@ const SuccessAction: React.FC = () => {
                   : "bg-[#A320EE]"
               }`}
             >
-              <div className="max-w-[199px] w-full h-11 lg:h-20">
+              <div className="max-w-[199px] w-fit sm:w-full h-11 lg:h-20">
                 <img
                   src={slide.logo}
                   alt={`${slide.partner} Logo`}
@@ -77,13 +77,13 @@ const SuccessAction: React.FC = () => {
                 />
               </div>
               <div className="w-full flex flex-col max-w-[310px] items-center space-y-2">
-                <h3 className="text-chineseBlack text-nowrap text-center font-lato text-lg sm:text-xl xl:text-[32px] md:text-2xl font-semibold">
+                <h3 className="text-chineseBlack text-nowrap text-center font-lato text-base sm:text-xl xl:text-[32px] md:text-2xl font-semibold">
                   {slide.partner}
                 </h3>
-                <p className="text-4xl sm:text-5xl md:text-6xl xl:text-[72px] font-black gradient-text">
+                <p className="text-3xl  sm::text-5xl lg:text-6xl xl:text-[72px] font-black gradient-text">
                   {slide.percentage}
                 </p>
-                <p className="text-sm sm:text-base md:text-lg xl:text-2xl text-center text-chineseBlack font-lato">
+                <p className="text-xs sm:text-base lg:text-lg xl:text-2xl text-center text-chineseBlack font-lato">
                   {slide.description}
                 </p>
               </div>
