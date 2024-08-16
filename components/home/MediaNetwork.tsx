@@ -1,8 +1,8 @@
 import Image from "next/image";
-import React from "react";
 import { networks } from "../common/Helper";
+import SecondaryButton from "../common/SecondaryButton";
 
-const MobileNetwork = () => {
+const MediaNetwork = () => {
   return (
     <section className="px-4 max-w-[90%] lg:py-14 lg:max-w-[1007px] w-full mx-auto py-6">
       <h3 className="text-base   sm:text-lg md:text-xl lg:text-2xl font-bold font-lato text-center text-thunder">
@@ -19,8 +19,11 @@ const MobileNetwork = () => {
           />
         ))}
       </div>
+      <SecondaryButton className="mx-auto mt-[30px]">
+        More clients
+      </SecondaryButton>
     </section>
   );
 };
 
-export default MobileNetwork;
+export default MediaNetwork;

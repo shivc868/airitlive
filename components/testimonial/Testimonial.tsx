@@ -3,11 +3,9 @@ import TestimoniaCard from "./TestimoniaCard";
 import Marquee from "react-fast-marquee";
 import { testimonialData } from "../common/Helper";
 
-
-
 const Testimonial = () => {
   return (
-    <section className="py-9 md:py-14 lg:py-20 xl:py-24">
+    <section className="py-9 md:py-14 ">
       <h3 className="section-heading text-center">
         What our Clients say about us!
       </h3>

@@ -1,14 +1,15 @@
+import ContactUs from "@/components/common/contactus/ContactUs";
 import Footer from "@/components/common/Footer";
 import Header from "@/components/common/Header";
-import MobileNetwork from "@/components/mobilenetwork/MobileNetwork";
 import Amplify from "@/components/home/Amplify";
 import Hero from "@/components/home/Hero";
+import MediaNetwork from "@/components/home/MediaNetwork";
 import Platforms from "@/components/home/Platforms";
-import { Inter } from "next/font/google";
-import TestimoniaCard from "@/components/testimonial/TestimoniaCard";
+import SuccessAction from "@/components/home/SuccessAction";
+import UnifiedPower from "@/components/home/UnifiedPower";
 import Testimonial from "@/components/testimonial/Testimonial";
-import ContactUs from "@/components/common/contactus/ContactUs";
 import ProblemSolutions from "@/components/home/ProblemSolutions";
+import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,8 +22,11 @@ export default function Home() {
         <Hero />
         <Amplify />
         <Platforms />
-        <MobileNetwork />
+        <MediaNetwork />
         <ProblemSolutions />
+        <MediaNetwork />
+        <UnifiedPower />
+        <SuccessAction />
         <Testimonial />
         <ContactUs />
         <Footer />
