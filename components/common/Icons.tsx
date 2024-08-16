@@ -301,7 +301,7 @@ export const RightArrow = () => (
     height="12"
     viewBox="0 0 11 12"
     fill="none"
-    className="ml-0.5 mb-[1px]"
+    className=""
   >
     <path
       d="M1 0.976562L9 6.79474L1 11.1584"

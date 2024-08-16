@@ -1,12 +1,11 @@
-
-import Footer from '@/components/common/Footer'
-import Header from '@/components/common/Header'
-import ContactUs from '@/components/contactus/ContactUs'
-import ServicesDetails from '@/components/services/ServicesDetails'
-import ServicesHero from '@/components/services/ServicesHero'
-import ServicesLogos from '@/components/services/ServicesLogos'
-import Testimonial from '@/components/testimonial/Testimonial'
-import React from 'react'
+import Footer from "@/components/common/Footer";
+import Header from "@/components/common/Header";
+import ContactUs from "@/components/common/contactus/ContactUs";
+import ServicesDetails from "@/components/services/ServicesDetails";
+import ServicesHero from "@/components/services/ServicesHero";
+import ServicesLogos from "@/components/services/ServicesLogos";
+import Testimonial from "@/components/testimonial/Testimonial";
+import React from "react";
 
 const ServicesPage = () => {
   return (
@@ -23,7 +22,7 @@ const ServicesPage = () => {
         <Footer />
       </main>
     </>
-  )
-}
+  );
+};
 
-export default ServicesPage
+export default ServicesPage;
