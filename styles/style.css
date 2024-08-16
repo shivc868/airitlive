@@ -28,9 +28,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.swiper-button-next::after {
+.success-in-action .swiper-button-next::after {
   display: none !important;
 }
-.swiper-button-prev::after {
+.success-in-action .swiper-button-prev::after {
   display: none !important;
 }

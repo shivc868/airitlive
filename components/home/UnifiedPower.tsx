@@ -20,13 +20,23 @@ const CardData = [
 
 const UnifiedPower: React.FC = () => {
   return (
-    <section className="max-w-[1182px] px-4 w-full mx-auto">
-      <div className="flex flex-wrap gap-8  justify-between items-center w-full">
-        {CardData.map((data, index) => (
-          <UnifiedCard key={index} data={data} />
-        ))}
+    <section className="max-w-[1182px] px-4 w-full mx-auto bg-[#f5e9f7] py-16">
+      <h3 className="text-center text-2xl md:text-3xl lg:text-4xl text-[#3a3a3a] font-semibold mb-10">
+        Unified Power for All Media
+      </h3>
+      <div className="flex flex-col gap-5 xl:gap-10 md:flex-row items-center w-full  mt-12">
+        <div className="md:w-[33%]">
+          <UnifiedCard data={CardData[0]} />
+        </div>
+
+        <div className="flex md:w-[66%] justify-center gap-5 xl:gap-10 w-full flex-nowrap">
+          <UnifiedCard data={CardData[1]} />
+          <UnifiedCard data={CardData[2]} />
+        </div>
       </div>
-      <SecondaryButton className="mx-auto mt-11">Contact Us</SecondaryButton>
+      <div className="flex justify-center mt-12">
+        <SecondaryButton className="mt-11">Contact Us</SecondaryButton>
+      </div>
     </section>
   );
 };

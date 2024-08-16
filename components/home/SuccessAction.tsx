@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Parallax, Pagination, Navigation } from "swiper/modules";
+import { NextButton, PrevButtton } from "../common/Icons";
 
 interface SlideData {
   logo: string;
@@ -44,7 +45,7 @@ const SuccessAction: React.FC = () => {
   };
 
   return (
-    <div className="max-w-[846px] h-full rounded-[22px] w-full mx-auto">
+    <div className="max-w-[846px] h-full rounded-[22px] w-full mx-auto success-in-action">
       <Swiper
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
@@ -55,7 +56,6 @@ const SuccessAction: React.FC = () => {
         onSlideChange={handleSlideChange}
         speed={600}
         parallax={true}
-        navigation={true}
         modules={[Parallax, Pagination, Navigation]}
       >
         {slidesData.map((slide, index) => (
@@ -97,157 +97,15 @@ const SuccessAction: React.FC = () => {
             }`}
             onClick={() => swiperRef.current?.slidePrev()}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="44"
-              height="44"
-              viewBox="0 0 44 44"
-              fill="none"
-            >
-              <g filter="url(#filter0_di_76_1697)">
-                <circle cx="22" cy="18" r="17" fill="#2D293E" />
-              </g>
-              <path d="M18.5 11L28.5 18L18 24" stroke="white" strokeWidth="2" />
-              <defs>
-                <filter
-                  id="filter0_di_76_1697"
-                  x="0"
-                  y="0"
-                  width="44"
-                  height="44"
-                  filterUnits="userSpaceOnUse"
-                  colorInterpolationFilters="sRGB"
-                >
-                  <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dy="4" />
-                  <feGaussianBlur stdDeviation="2.5" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_76_1697"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_76_1697"
-                    result="shape"
-                  />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dy="4" />
-                  <feGaussianBlur stdDeviation="1.1" />
-                  <feComposite
-                    in2="hardAlpha"
-                    operator="arithmetic"
-                    k2="-1"
-                    k3="1"
-                  />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0.681667 0 0 0 0 0.67485 0 0 0 0 0.67485 0 0 0 0.25 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="shape"
-                    result="effect2_innerShadow_76_1697"
-                  />
-                </filter>
-              </defs>
-            </svg>
+            <PrevButtton />
           </button>
           <button
-            className={`swiper-button-next ${
+            className={` swiper-button-next ${
               isEnd ? "opacity-0 pointer-events-none" : ""
             }`}
             onClick={() => swiperRef.current?.slideNext()}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="44"
-              height="44"
-              viewBox="0 0 44 44"
-              fill="none"
-            >
-              <g filter="url(#filter0_di_76_1697)">
-                <circle cx="22" cy="18" r="17" fill="#2D293E" />
-              </g>
-              <path d="M18.5 11L28.5 18L18 24" stroke="white" strokeWidth="2" />
-              <defs>
-                <filter
-                  id="filter0_di_76_1697"
-                  x="0"
-                  y="0"
-                  width="44"
-                  height="44"
-                  filterUnits="userSpaceOnUse"
-                  colorInterpolationFilters="sRGB"
-                >
-                  <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dy="4" />
-                  <feGaussianBlur stdDeviation="2.5" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_76_1697"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_76_1697"
-                    result="shape"
-                  />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dy="4" />
-                  <feGaussianBlur stdDeviation="1.1" />
-                  <feComposite
-                    in2="hardAlpha"
-                    operator="arithmetic"
-                    k2="-1"
-                    k3="1"
-                  />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0.681667 0 0 0 0 0.67485 0 0 0 0 0.67485 0 0 0 0.25 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="shape"
-                    result="effect2_innerShadow_76_1697"
-                  />
-                </filter>
-              </defs>
-            </svg>
+            <NextButton />
           </button>
         </div>
       </Swiper>

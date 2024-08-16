@@ -13,16 +13,15 @@ const ContactUs = () => {
           <h3 className="text-lg sm:text-xl md:text-3xl lg:text-[40px] xl:text-[48px] lg:leading-[119%]">
             Ready to transform your media ecosystem?
           </h3>
-          <SecondaryButton className="" icon={true}>
+          <SecondaryButton className="h-8 md:h-11" icon={true}>
             Become a partner
-            <span className="w-[26px] h-[26px] bg-purple rounded-full flex items-center justify-center">
+            <span className="h-5 w-5 md:w-[26px] md:h-[26px] bg-purple rounded-full flex items-center justify-center">
               <RightArrow />
             </span>
           </SecondaryButton>
         </div>
         <ContactForm />
       </div>{" "}
-
     </section>
   );
 };

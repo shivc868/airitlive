@@ -313,8 +313,8 @@ export const RightArrow = () => (
 export const HandShakeIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="63"
-    height="55"
+    width="100%"
+    height="100%"
     viewBox="0 0 63 55"
     fill="none"
   >
@@ -327,8 +327,8 @@ export const HandShakeIcon = () => (
 export const SharedIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="59"
-    height="60"
+    width="100%"
+    height="100%"
     viewBox="0 0 59 60"
     fill="none"
   >
@@ -341,8 +341,8 @@ export const SharedIcon = () => (
 export const ForCasting = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="49"
-    height="49"
+    width="100%"
+    height="100%"
     viewBox="0 0 49 49"
     fill="none"
   >
@@ -350,5 +350,143 @@ export const ForCasting = () => (
       d="M16.5 37.9979H11.1667V19.3312H16.5V37.9979ZM27.1667 37.9979H21.8333V11.3312H27.1667V37.9979ZM37.8333 37.9979H32.5V27.3312H37.8333V37.9979ZM43.1667 43.3312H5.83333V5.99788H43.1667V43.5979M43.1667 0.664551H5.83333C2.9 0.664551 0.5 3.06455 0.5 5.99788V43.3312C0.5 46.2646 2.9 48.6646 5.83333 48.6646H43.1667C46.1 48.6646 48.5 46.2646 48.5 43.3312V5.99788C48.5 3.06455 46.1 0.664551 43.1667 0.664551Z"
       fill="#502C6D"
     />
+  </svg>
+);
+export const PrevButtton = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="44"
+    height="44"
+    viewBox="0 0 44 44"
+    fill="none"
+  >
+    <g filter="url(#filter0_di_76_1697)">
+      <circle cx="22" cy="18" r="17" fill="#2D293E" />
+    </g>
+    <path d="M18.5 11L28.5 18L18 24" stroke="white" strokeWidth="2" />
+    <defs>
+      <filter
+        id="filter0_di_76_1697"
+        x="0"
+        y="0"
+        width="44"
+        height="44"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="4" />
+        <feGaussianBlur stdDeviation="2.5" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_76_1697"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow_76_1697"
+          result="shape"
+        />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="4" />
+        <feGaussianBlur stdDeviation="1.1" />
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.681667 0 0 0 0 0.67485 0 0 0 0 0.67485 0 0 0 0.25 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="shape"
+          result="effect2_innerShadow_76_1697"
+        />
+      </filter>
+    </defs>
+  </svg>
+);
+export const NextButton = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="44"
+    height="44"
+    viewBox="0 0 44 44"
+    fill="none"
+  >
+    <g filter="url(#filter0_di_76_1697)">
+      <circle cx="22" cy="18" r="17" fill="#2D293E" />
+    </g>
+    <path d="M18.5 11L28.5 18L18 24" stroke="white" strokeWidth="2" />
+    <defs>
+      <filter
+        id="filter0_di_76_1697"
+        x="0"
+        y="0"
+        width="44"
+        height="44"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="4" />
+        <feGaussianBlur stdDeviation="2.5" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_76_1697"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow_76_1697"
+          result="shape"
+        />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="4" />
+        <feGaussianBlur stdDeviation="1.1" />
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.681667 0 0 0 0 0.67485 0 0 0 0 0.67485 0 0 0 0.25 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="shape"
+          result="effect2_innerShadow_76_1697"
+        />
+      </filter>
+    </defs>
   </svg>
 );
