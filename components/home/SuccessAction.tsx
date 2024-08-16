@@ -63,13 +63,13 @@ const SuccessAction: React.FC = () => {
             <div
               className={`flex items-center justify-between py-[37px] px-[50px] rounded-[22px] shadow-[-8px_9px_8.1px_0px_rgba(0,0,0,0.25)] h-full ${
                 index % 3 === 0
-                  ? "bg-purple"
-                  : index % 3 === 1
                   ? "bg-lightPurple"
-                  : "bg-red-900"
+                  : index % 3 === 1
+                  ? "bg-[#B84FF4]"
+                  : "bg-[#A320EE]"
               }`}
             >
-              <div className="max-w-[199px] w-full h-20">
+              <div className="max-w-[199px] w-full h-11 lg:h-20">
                 <img
                   src={slide.logo}
                   alt={`${slide.partner} Logo`}
