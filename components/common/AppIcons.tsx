@@ -39,3 +39,94 @@ export const CloseIcon = () => (
     </defs>
   </svg>
 );
+
+export const ArrowIcon = () => (
+  <svg
+    width="50"
+    height="50"
+    viewBox="0 0 50 50"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g filter="url(#filter0_di_15_2019)">
+      <circle
+        cx="25.1198"
+        cy="21.4833"
+        r="21.3654"
+        transform="rotate(-90 25.1198 21.4833)"
+        fill="url(#paint0_linear_15_2019)"
+      />
+      <path
+        d="M25.2398 10.3858V32.7646M25.2398 10.3858L12.8767 22.7489M25.2398 10.3858L37.603 22.7489"
+        stroke="#D4D1D1"
+        stroke-width="1.56495"
+      />
+    </g>
+    <defs>
+      <filter
+        id="filter0_di_15_2019"
+        x="0.647593"
+        y="0.11792"
+        width="48.9441"
+        height="49.722"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
+      >
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="3.8832" />
+        <feGaussianBlur stdDeviation="1.55328" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_15_2019"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow_15_2019"
+          result="shape"
+        />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="3.8832" />
+        <feGaussianBlur stdDeviation="1.55328" />
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.981667 0 0 0 0 0.981667 0 0 0 0 0.981667 0 0 0 0.28 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="shape"
+          result="effect2_innerShadow_15_2019"
+        />
+      </filter>
+      <linearGradient
+        id="paint0_linear_15_2019"
+        x1="3.75439"
+        y1="0.117928"
+        x2="25.1198"
+        y2="42.8488"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0.26616" stop-color="#A136DF" />
+        <stop offset="1" stop-color="#000C61" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
