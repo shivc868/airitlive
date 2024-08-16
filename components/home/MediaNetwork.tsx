@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { networks } from "../common/Helper";
-import SecondaryButton from "../common/SecondaryButton";
+import Image from 'next/image'
+import { networks } from '../common/Helper'
+import SecondaryButton from '../common/SecondaryButton'
 
 const MediaNetwork = () => {
   return (
@@ -24,7 +24,7 @@ const MediaNetwork = () => {
         More clients
       </SecondaryButton>
     </section>
-  );
-};
+  )
+}
 
-export default MediaNetwork;
+export default MediaNetwork

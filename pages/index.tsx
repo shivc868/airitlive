@@ -16,9 +16,8 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <>
-      <main className="bg-main-bg ">
-        {" "}
-        <Header />
+      <main className="bg-main-bg">
+        <Header additionalclass="relative border-b-[2px] border-[#564F6F] bg-main-bg " />
         <Hero />
         <Amplify />
         <Platforms />
@@ -32,5 +31,5 @@ export default function Home() {
         <Footer />
       </main>
     </>
-  );
+  )
 }

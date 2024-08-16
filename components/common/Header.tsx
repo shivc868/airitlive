@@ -1,22 +1,25 @@
-import React, { useEffect, useState } from "react";
-import HeaderLinks from "./HeaderLinks";
-import { styles } from "./style";
-import { CloseIcon, MenuIcon } from "./AppIcons";
-import AnimateHeight from "react-animate-height";
+import { useEffect, useState } from 'react'
+import { CloseIcon, MenuIcon } from './AppIcons'
+import HeaderLinks from './HeaderLinks'
+import { styles } from './style'
 
-const Header = () => {
-  const [showMobileNav, setShowMobileNav] = useState(false);
+interface IHeaderProps {
+  additionalclass: string
+}
+
+const Header = (props: IHeaderProps) => {
+  const [showMobileNav, setShowMobileNav] = useState(false)
 
   useEffect(() => {
     if (showMobileNav) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden'
     } else {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = 'auto'
     }
-  }, [showMobileNav]);
+  }, [showMobileNav])
   return (
     <>
-      <section className="z-[1000] bg-main-bg border-b-[2px] relative px-8 border-[#564F6F]">
+      <section className={`z-[1000] px-8 w-full ${props.additionalclass}`}>
         <div className={styles.container}>
           <nav className="py-4">
             <header className="flex items-center justify-between">
@@ -60,7 +63,7 @@ const Header = () => {
         ></div>
       )}
     </>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
