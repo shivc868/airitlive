@@ -1,6 +1,7 @@
-import ContactUs from '@/components/common/contactus/ContactUs'
+
 import Footer from '@/components/common/Footer'
 import Header from '@/components/common/Header'
+import ContactUs from '@/components/contactus/ContactUs'
 import ServicesDetails from '@/components/services/ServicesDetails'
 import ServicesHero from '@/components/services/ServicesHero'
 import ServicesLogos from '@/components/services/ServicesLogos'
