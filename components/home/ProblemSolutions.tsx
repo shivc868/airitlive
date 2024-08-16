@@ -105,7 +105,7 @@ const ProblemSolutions = () => {
     <section className="px-4">
       <div className={styles.container}>
         <h2 className="section-heading py-14 text-center">Problems we solve</h2>
-        <div className="flex overflow-hidden px-8 gap-5 flex-wrap">
+        <div className="flex overflow-hidden sm:px-8 gap-5 flex-wrap">
           <Swiper
             className="mySwiper max-w-full !overflow-visible !pb-10"
             onSwiper={(swiper) => {
@@ -116,12 +116,11 @@ const ProblemSolutions = () => {
             loop={true}
             speed={600}
             parallax={true}
-            navigation={true}
             onSlideChange={handleSlideChange}
             pagination={{
               clickable: true,
             }}
-            modules={[Parallax, Pagination, Navigation]}
+            modules={[Parallax, Pagination]}
           >
             {problemData.map((problem, index) => (
               <SwiperSlide
@@ -130,14 +129,16 @@ const ProblemSolutions = () => {
               >
                 <div className="max-w-full min-h-full max-h-full min-w-full cursor-pointer flex flex-col overflow-hidden group relative bg-[#C594F6] rounded-lg w-full">
                   <div className="transition-all flex-col grow flex h-full duration-300 group-hover:-translate-y-[calc(100%-60px)] relative z-10">
-                    <div className="pt-10 !bg-black justify-end grow problem-solution-bg-gradient flex flex-col gap-24">
-                      <h3 className="text-[30px] px-4 leading-[1.2] text-center text-white opacity-95 font-lato font-bold">
-                        {problem.title}
-                      </h3>
+                    <div className="bg-black grow h-full flex flex-col w-full">
+                      <div className="pt-10 justify-end grow problem-solution-bg-gradient flex flex-col gap-24">
+                        <h3 className="text-[30px] px-4 leading-[1.2] text-center text-white opacity-95 font-lato font-bold">
+                          {problem.title}
+                        </h3>
 
-                      <p className="text-white tracking-[0.21px] p-3 text-[18px] font-lato leading-[1.2]">
-                        {problem.description}
-                      </p>
+                        <p className="text-white tracking-[0.21px] p-3 text-[18px] font-lato leading-[1.2]">
+                          {problem.description}
+                        </p>
+                      </div>
                     </div>
                     <div className="w-full origin-center duration-300 transition-all group-hover:rotate-180 min-h-[60px] flex justify-center items-center">
                       <ArrowIcon />
@@ -154,7 +155,7 @@ const ProblemSolutions = () => {
                 </div>
               </SwiperSlide>
             ))}
-            <div className="flex items-center">
+            {/* <div className="flex items-center">
               <button
                 className={`swiper-button-prev rotate-180 !left-[-25px]`}
                 onClick={() => swiperRef.current?.slidePrev()}
@@ -317,7 +318,7 @@ const ProblemSolutions = () => {
                   </defs>
                 </svg>
               </button>
-            </div>
+            </div> */}
           </Swiper>
         </div>
       </div>

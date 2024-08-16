@@ -1,22 +1,22 @@
-import { useEffect, useState } from 'react'
-import { CloseIcon, MenuIcon } from './AppIcons'
-import HeaderLinks from './HeaderLinks'
-import { styles } from './style'
+import { useEffect, useState } from "react";
+import { CloseIcon, MenuIcon } from "./AppIcons";
+import HeaderLinks from "./HeaderLinks";
+import { styles } from "./style";
 
 interface IHeaderProps {
-  additionalclass: string
+  additionalclass: string;
 }
 
 const Header = (props: IHeaderProps) => {
-  const [showMobileNav, setShowMobileNav] = useState(false)
+  const [showMobileNav, setShowMobileNav] = useState(false);
 
   useEffect(() => {
     if (showMobileNav) {
-      document.body.style.overflow = 'hidden'
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'auto'
+      document.body.style.overflow = "auto";
     }
-  }, [showMobileNav])
+  }, [showMobileNav]);
   return (
     <>
       <section className={`z-[1000] px-8 w-full ${props.additionalclass}`}>
@@ -63,7 +63,7 @@ const Header = (props: IHeaderProps) => {
         ></div>
       )}
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

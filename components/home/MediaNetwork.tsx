@@ -1,10 +1,10 @@
-import Image from 'next/image'
-import { networks } from '../common/Helper'
-import SecondaryButton from '../common/SecondaryButton'
+import Image from "next/image";
+import { networks } from "../common/Helper";
+import SecondaryButton from "../common/SecondaryButton";
 
 const MediaNetwork = () => {
   return (
-    <section className="px-4  lg:py-14 lg:max-w-[1032px] w-full mx-auto py-6">
+    <section className="px-4 lg:py-14 lg:max-w-[1032px] w-full mx-auto py-6">
       <h3 className="text-base   sm:text-lg md:text-xl lg:text-2xl font-bold font-lato text-center text-thunder">
         $5M Revenue Boost Across Our Media Network"
       </h3>
@@ -24,7 +24,7 @@ const MediaNetwork = () => {
         More clients
       </SecondaryButton>
     </section>
-  )
-}
+  );
+};
 
-export default MediaNetwork
+export default MediaNetwork;

@@ -21,16 +21,36 @@
 }
 
 .problem-solution-bg-gradient {
-  background: url(../public/img/Frame\ 1410083765.png);
+  /* background-color: black; */
+  background-image: url("../public/img/frame1410083765.png");
   width: 100%;
   height: 100%;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .success-in-action .swiper-button-next::after {
   display: none !important;
 }
+
 .success-in-action .swiper-button-prev::after {
   display: none !important;
+}
+
+.card-back-side {
+  background-image: url("../public/img/back-side.png");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card-front-side {
+  background-image: url("../public/img/front-side.png");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
