@@ -498,7 +498,7 @@ export const InsightNext = () => (
     viewBox="0 0 66 66"
     fill="none"
   >
-    <g filter="url(#filter0_di_2012_974)">
+    <g filter="url(#filter0_di_2018_500)">
       <circle cx="32.75" cy="28.75" r="27.75" fill="#2D293E" />
       <path
         d="M24.9785 16.5469L40.1484 27.9243C41.3959 28.8599 41.3153 30.7564 39.993 31.5828L24.9785 40.9669"
@@ -508,7 +508,7 @@ export const InsightNext = () => (
     </g>
     <defs>
       <filter
-        id="filter0_di_2012_974"
+        id="filter0_di_2018_500"
         x="0"
         y="0"
         width="65.5"
@@ -533,12 +533,12 @@ export const InsightNext = () => (
         <feBlend
           mode="normal"
           in2="BackgroundImageFix"
-          result="effect1_dropShadow_2012_974"
+          result="effect1_dropShadow_2018_500"
         />
         <feBlend
           mode="normal"
           in="SourceGraphic"
-          in2="effect1_dropShadow_2012_974"
+          in2="effect1_dropShadow_2018_500"
           result="shape"
         />
         <feColorMatrix
@@ -557,7 +557,7 @@ export const InsightNext = () => (
         <feBlend
           mode="normal"
           in2="shape"
-          result="effect2_innerShadow_2012_974"
+          result="effect2_innerShadow_2018_500"
         />
       </filter>
     </defs>

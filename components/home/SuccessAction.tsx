@@ -24,7 +24,9 @@ const slidesData = [
 
 const SuccessAction = () => (
   <>
-    <h3 className="section-heading text-center">Success in Action</h3>
+    <h3 className="section-heading text-center mb-4 lg:mb-6">
+      Success in Action
+    </h3>
     <SliderLayout classname={undefined} paginationClass="pagination-style-one">
       {slidesData.map((slide, index) => (
         <div

@@ -49,11 +49,11 @@ const SliderLayout: React.FC<SuccessActionProps> = ({
         modules={[Parallax, Pagination, Navigation]}
       >
         {React.Children.map(children, (child, index) => (
-          <SwiperSlide className="h-full py-12 md:!py-16" key={index}>
+          <SwiperSlide className="h-full " key={index}>
             {child}
           </SwiperSlide>
         ))}
-        <div className="flex items-center">
+        <div className="flex items-center ">
           <button
             className={`swiper-button-prev  rotate-180 ${
               isBeginning ? "opacity-0 pointer-events-none" : ""
