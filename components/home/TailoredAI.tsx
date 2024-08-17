@@ -80,12 +80,20 @@ const TailoredAI: React.FC<SuccessActionProps> = ({ prevIcon, nextIcon }) => {
   };
 
   return (
-    <section className="w-full mx-auto relative success-in-action  max-w-[1198px]">
+    <section className="w-full mx-auto relative success-in-action space-y-14  max-w-[1198px]">
+      <div className="space-y-4">
+        <h3 className="section-heading text-center">
+          Global Sports & Entertainment Group{" "}
+        </h3>
+        <p className="text-[#2D293E] font-bold font-lato text-xl xl:text-2xl text-center">
+          Your Content, Maximized Everywhere Network
+        </p>
+      </div>
       <h3 className="section-heading text-center">
         Tailored AI for your Media
       </h3>
       <div className="md:block hidden relative">
-        <div className="mt-8 max-w-[1122px] relative  mx-auto">
+        <div className=" max-w-[1122px] relative  mx-auto">
           <Swiper
             onBeforeInit={(swiper) => {
               swiperRef.current = swiper;

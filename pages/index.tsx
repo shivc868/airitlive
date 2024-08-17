@@ -27,7 +27,7 @@ export default function Home() {
         <MediaNetwork />
         <ProblemSolutions />
         <WhyChoose />
-        <MediaNetwork />
+
         <TailoredAI />
         <UnifiedPower />
         <SuccessAction />
