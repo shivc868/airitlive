@@ -37,7 +37,7 @@ export default function PlatformSlider() {
           swiperRef.current = swiper;
         }}
         slidesPerView={3}
-        spaceBetween={50}
+        spaceBetween={40}
         centeredSlides={true}
         onSlideChange={handleSlideChange}
         loop={true}
@@ -46,6 +46,17 @@ export default function PlatformSlider() {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
+        breakpoints={{
+          640: {
+            spaceBetween: 15,
+          },
+          768: {
+            spaceBetween: 25,
+          },
+          1024: {
+            spaceBetween: 30,
+          },
+        }}
       >
         {platforms.map((platform, index) => (
           <SwiperSlide key={index}>
@@ -62,7 +73,7 @@ export default function PlatformSlider() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="flex absolute top-0 items-center w-full justify-center h-full">
+      <div className="hidden lg:flex absolute top-0 items-center w-full justify-center h-full">
         <button
           className={`swiper-button-prev -ml-[4%] rotate-180 ${
             isBeginning ? "opacity-0 pointer-events-none" : ""
