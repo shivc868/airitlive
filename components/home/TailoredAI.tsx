@@ -16,7 +16,7 @@ interface SuccessActionProps {
   nextIcon?: React.ReactNode;
 }
 
-const slidesData = [
+const tailoredAi = [
   {
     src: "/img/real-time.webp",
     title: "Real Time Ad Insertion During Live Sport Events",
@@ -32,6 +32,10 @@ const slidesData = [
 ];
 const slidesData2 = [
   {
+    src: "/img/breaking-news.webp",
+    title: "Real Time Ad Insertion During Live Sport Events",
+  },
+  {
     src: "/img/add.webp",
     title: "Context Aware Ad Placement",
   },
@@ -40,17 +44,10 @@ const slidesData2 = [
     src: "/img/cross.webp",
     title: "Cross Platform Story Flow Optimization",
   },
-  {
-    src: "/img/breaking-news.webp",
-    title: "Real Time Ad Insertion During Live Sport Events",
-  },
+
   {
     src: "/img/cross.webp",
     title: "Cross Platform Story Flow Optimization",
-  },
-  {
-    src: "/img/breaking-news.webp",
-    title: "Real Time Ad Insertion During Live Sport Events",
   },
 ];
 const slidesData3 = [
@@ -70,33 +67,8 @@ const slidesData3 = [
     src: "/img/viewer-journey.webp",
     title: "Viewer Journey Monetization",
   },
-  {
-    src: "/img/viewer-journey.webp",
-    title: "Viewer Journey Monetization",
-  },
 ];
-const slidesData4 = [
-  {
-    src: "/img/friendly-app.webp",
-    title: "Binge-friendly Ad Experience",
-  },
-  {
-    src: "/img/content.webp",
-    title: "Content Matched Brand Integration",
-  },
-  {
-    src: "/img/viewer-journey.webp",
-    title: "Viewer Journey Monetization",
-  },
-  {
-    src: "/img/viewer-journey.webp",
-    title: "Viewer Journey Monetization",
-  },
-  {
-    src: "/img/viewer-journey.webp",
-    title: "Viewer Journey Monetization",
-  },
-];
+
 const TailoredAI: React.FC<SuccessActionProps> = ({ prevIcon, nextIcon }) => {
   const swiperRef = useRef<any>(null);
   const [isBeginning, setIsBeginning] = useState(true);
@@ -112,11 +84,11 @@ const TailoredAI: React.FC<SuccessActionProps> = ({ prevIcon, nextIcon }) => {
       <h3 className="section-heading text-center">
         Tailored AI for your Media
       </h3>
-      <div className="md:block hidden">
-        <div className="mt-8 max-w-[1122px] mx-auto">
+      <div className="md:block hidden relative">
+        <div className="mt-8 max-w-[1122px] relative  mx-auto">
           <Swiper
             onBeforeInit={(swiper) => {
-              swiperRef.current = swiper; // Store swiper instance
+              swiperRef.current = swiper;
             }}
             slidesPerView={3}
             spaceBetween={46}
@@ -126,7 +98,7 @@ const TailoredAI: React.FC<SuccessActionProps> = ({ prevIcon, nextIcon }) => {
             navigation={true}
             modules={[Parallax, Navigation]}
           >
-            {slidesData.map((slide, index) => (
+            {tailoredAi.map((slide, index) => (
               <SwiperSlide key={index}>
                 <div className="flex flex-col relative  w-full h-[220px]">
                   <img
@@ -141,28 +113,28 @@ const TailoredAI: React.FC<SuccessActionProps> = ({ prevIcon, nextIcon }) => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
-        <div className="flex items-center justify-center mt-4">
-          <button
-            className={`swiper-button-prev rotate-180 ${
-              isBeginning ? "opacity-0 pointer-events-none" : ""
-            }`}
-            onClick={() => swiperRef.current?.slidePrev()}
-          >
-            {prevIcon || <PrevButtton />}
-          </button>
-          <button
-            className={`swiper-button-next ${
-              isEnd ? "opacity-0 pointer-events-none" : ""
-            }`}
-            onClick={() => swiperRef.current?.slideNext()}
-          >
-            {nextIcon || <NextButton />}
-          </button>
+          <div className="flex absolute top-0 items-center w-full justify-center h-full">
+            <button
+              className={`swiper-button-prev -ml-[4%] rotate-180 ${
+                isBeginning ? "opacity-0 pointer-events-none" : ""
+              }`}
+              onClick={() => swiperRef.current?.slidePrev()}
+            >
+              {prevIcon || <PrevButtton />}
+            </button>
+            <button
+              className={`swiper-button-next -mr-[4%] ${
+                isEnd ? "opacity-0 pointer-events-none" : ""
+              }`}
+              onClick={() => swiperRef.current?.slideNext()}
+            >
+              {nextIcon || <NextButton />}
+            </button>
+          </div>
         </div>
       </div>
       <div className="block md:hidden w-full">
-        <TailoredAIMobile slidesData2={slidesData4} />
+        <TailoredAIMobile slidesData2={tailoredAi} />
         <TailoredAIMobile slidesData2={slidesData2} />
         <TailoredAIMobile slidesData2={slidesData3} />
       </div>

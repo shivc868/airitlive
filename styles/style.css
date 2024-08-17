@@ -83,6 +83,28 @@ body {
   width: 20px;
   height: 20px;
 }
+.pagination-style-two .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.pagination-style-two .swiper-pagination {
+  margin-top: 50px;
+}
+.success-in-action .swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+.success-in-action .swiper-pagination-bullet-active {
+  background-color: #2d293e;
+}
+.success-in-action .swiper-pagination {
+  position: relative !important;
+  margin-top: 20px;
+}
 
 /* Media query for mobile screens */
 @media (max-width: 768px) {
