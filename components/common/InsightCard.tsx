@@ -18,7 +18,7 @@ const InsightCard: React.FC<InsightCardProps> = ({
 }) => {
   return (
     <div
-      className={`relative overflow-hidden w-full h-[350px] md:h-[400px]  bg-center rounded-[22px] bg-[url('/img/latest-insight-bg.webp')] bg-cover ${className}`}
+      className={`relative overflow-hidden w-full h-[350px] md:h-[400px] lg:h-[500px] bg-center rounded-[22px] bg-[url('/img/latest-insight-bg.webp')] bg-cover ${className}`}
     >
       <div className="absolute block xl:hidden bg-black/30 inset-0 z-0"></div>
       <div

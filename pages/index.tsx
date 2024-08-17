@@ -12,6 +12,7 @@ import ProblemSolutions from "@/components/home/ProblemSolutions";
 import WhyChoose from "@/components/home/WhyChoose";
 import { Inter } from "next/font/google";
 import LatestInsight from "@/components/home/LatestInsight";
+import TailoredAI from "@/components/home/TailoredAI";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function Home() {
         <ProblemSolutions />
         <WhyChoose />
         <MediaNetwork />
+        <TailoredAI />
         <UnifiedPower />
         <SuccessAction />
         <Testimonial />
