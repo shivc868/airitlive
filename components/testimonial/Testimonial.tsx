@@ -9,12 +9,7 @@ const Testimonial = () => {
       <h3 className="section-heading text-center">
         What our Clients say about us!
       </h3>
-      <Marquee
-        direction="right"
-        speed={50}
-        pauseOnHover={true}
-        gradient={false}
-      >
+      <Marquee direction="left" speed={90} pauseOnHover={true} gradient={false}>
         <div className="flex h-auto mt-7 sm:mt-9 md:mt-12 lg:mt-14 xl:mt-16">
           {testimonialData.map((testimonial) => (
             <TestimoniaCard key={testimonial.id} data={testimonial} />

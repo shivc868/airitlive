@@ -21,8 +21,9 @@ const PerformanceMetricsCards: React.FC<PerformanceMetricsCardsProps> = ({
       <h6 className="text-[#2D293E] sm:text-start text-center text-[20px] leading-[1.2] sm:text-[22px] lg:text-[24px] font-lato">
         {description}
       </h6>
-      <div>
-        <button className="flex px-3 py-1 rounded-lg bg-white justify-center items-center gap-1">
+      <div className="imageDiv">
+        {" "}
+        <button className="flex px-3 py-1 rounded-lg bg-white justify-center items-center gap-1 ">
           {icon}
           <span className="text-black font-lato text-[18px]">{category}</span>
         </button>

@@ -1,9 +1,7 @@
 import ContactUs from "@/components/common/contactus/ContactUs";
 import Faqs from "@/components/common/Faqs";
-
 import LatestInsight from "@/components/home/LatestInsight";
 import ServiceCard from "@/components/services/ServiceCard";
-
 import ServicesHero from "@/components/services/ServicesHero";
 import ServicesLogos from "@/components/services/ServicesLogos";
 import Testimonial from "@/components/testimonial/Testimonial";
