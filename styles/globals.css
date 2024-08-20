@@ -37,7 +37,6 @@
 }
 .imageDiv {
   position: relative;
-  padding: 0 16px;
   height: 40px;
   transition: all 0.3s ease-in-out;
 }
@@ -60,16 +59,15 @@
 }
 
 .imageDiv:hover button {
-  font-size: 18px;
-  font-weight: 600;
-  transform: scale(1.1);
-  width: calc(100% + 40px);
-  height: calc(100% + 10px);
+  font-size: 26px !important;
+  transform: scale(1.3);
+  width: calc(100% + 3px);
+  height: calc(100% + 1px);
 }
 
 .imageDiv:hover::before {
-  width: calc(100% + 40px);
-  height: calc(100% + 10px);
+  width: calc(100% + 3px);
+  height: calc(100% + 1px);
   left: 0;
   top: 0;
 }

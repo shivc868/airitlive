@@ -15,8 +15,8 @@ const Amplify = () => {
             </div>
           </div>
 
-          <div className="flex sm:flex-row flex-col items-center gap-3 lg:gap-0 justify-center">
-            <div className="flex flex-col sm:flex-row lg:flex-col gap-3 lg:gap-12">
+          <div className="flex flex-col md:flex-row  relative items-center gap-3 lg:gap-0 justify-center">
+            <div className="flex lg:flex-col gap-3 lg:gap-14">
               <PerformanceMetricsCards
                 icon={<NewsIcon />}
                 percentage="95+"
@@ -30,7 +30,8 @@ const Amplify = () => {
                 description="increased ad relevance in breaking stories"
               />
             </div>
-            <div>
+            <div className="hidden lg:block w-[250px] h-[250px]"></div>
+            <div className="lg:absolute right-0">
               <PerformanceMetricsCards
                 icon={<EntertainmentIcon />}
                 percentage="70%"
