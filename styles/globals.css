@@ -38,14 +38,14 @@
 .imageDiv {
   position: relative;
   padding: 0 16px;
-  height: 40px; /* Ensure initial height */
-  transition: all 0.3s ease-in-out; /* Smooth transition for size changes */
+  height: 40px;
+  transition: all 0.3s ease-in-out;
 }
 
 .imageDiv button {
-  font-size: 14px; /* Initial font size for button text */
-  transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out; /* Smooth transition for scale and font size */
-  transform-origin: top left; /* Ensures the scale effect grows from the bottom right */
+  font-size: 14px;
+  transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
+  transform-origin: top left;
 }
 
 .imageDiv::before {
@@ -56,20 +56,20 @@
   width: 0;
   height: 0;
   z-index: 444;
-  transition: all 0.3s ease-in-out; /* Smooth transition for the pseudo-element */
+  transition: all 0.3s ease-in-out;
 }
 
 .imageDiv:hover button {
   font-size: 18px;
   font-weight: 600;
   transform: scale(1.1);
-  width: calc(100% + 40px); /* Adjust to cover new size */
+  width: calc(100% + 40px);
   height: calc(100% + 10px);
 }
 
 .imageDiv:hover::before {
-  width: calc(100% + 40px); /* Adjust to cover new size */
-  height: calc(100% + 10px); /* Adjust to cover new size */
+  width: calc(100% + 40px);
+  height: calc(100% + 10px);
   left: 0;
   top: 0;
 }
