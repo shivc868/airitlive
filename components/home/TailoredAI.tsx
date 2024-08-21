@@ -85,8 +85,8 @@ const TailoredAI: React.FC<SuccessActionProps> = ({ prevIcon, nextIcon }) => {
   };
 
   return (
-    <section className="w-full mx-auto relative success-in-action space-y-14 max-w-[1198px] px-4">
-      <div className="space-y-4">
+    <section className="w-full mx-auto relative success-in-action space-y-14 max-w-[1198px] md:px-4">
+      <div className="space-y-4 px-4 md:px-0">
         <h3 className="section-heading text-center">
           Global Sports & Entertainment Group
         </h3>

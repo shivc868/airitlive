@@ -27,11 +27,15 @@ const SuccessAction = () => (
     <h3 className="section-heading text-center mb-4 lg:mb-6">
       Success in Action
     </h3>
-    <SliderLayout classname={undefined} paginationClass="pagination-style-one">
+    <SliderLayout
+      slidesPerView={1.14}
+      classname={undefined}
+      paginationClass="pagination-style-one"
+    >
       {slidesData.map((slide, index) => (
         <div
           key={index}
-          className={`flex items-center justify-between py-4 md:py-[37px] px-5 md:px-[50px] rounded-[22px] shadow-[-8px_9px_8.1px_0px_rgba(0,0,0,0.25)] h-full ${
+          className={`flex items-center w-full justify-between min-h-[160px] py-4 md:py-[37px] px-5 md:px-[50px] rounded-[22px] shadow-[-8px_9px_8.1px_0px_rgba(0,0,0,0.25)] h-full ${
             slide.partner === "Major League Partner"
               ? "bg-lightPurple"
               : slide.partner === "24/7 News Network"

@@ -91,7 +91,7 @@ body {
 }
 
 .pagination-style-two .swiper-pagination {
-  margin-top: 50px;
+  margin-top: 50px !important;
 }
 .success-in-action .swiper-pagination-bullet {
   width: 7px;
@@ -103,7 +103,7 @@ body {
 }
 .success-in-action .swiper-pagination {
   position: relative !important;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 /* Media query for mobile screens */

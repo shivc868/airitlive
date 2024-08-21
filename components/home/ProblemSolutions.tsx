@@ -111,7 +111,7 @@ const ProblemSolutions = () => {
             onSwiper={(swiper) => {
               swiperRef.current = swiper;
             }}
-            slidesPerView={"auto"}
+            slidesPerView={2}
             spaceBetween={20}
             loop={true}
             speed={600}

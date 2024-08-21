@@ -14,16 +14,17 @@ import {
   Navigation,
   EffectCoverflow,
   Autoplay,
+  Parallax,
 } from "swiper/modules";
 import { NextButton, PrevButtton } from "../common/Icons";
 
 const platforms = [
   { src: "/img/platform-1.png", title: "CTV" },
   { src: "/img/platform-2.png", title: "OTT" },
-  { src: "/img/platform-1.png", title: "Native" },
-  { src: "/img/platform-1.png", title: "CTV" },
-  { src: "/img/platform-2.png", title: "OTT" },
-  { src: "/img/platform-1.png", title: "Native" },
+  { src: "/img/platform-3.webp", title: "Native" },
+  { src: "/img/platform-4.webp", title: "Apps" },
+  { src: "/img/platform-5.webp", title: "Games" },
+  { src: "/img/platform-6.webp", title: "Website" },
 ];
 
 const PlatformSlider: React.FC = () => {
@@ -42,41 +43,50 @@ const PlatformSlider: React.FC = () => {
       <div className="md:hidden block">
         <div className="relative max-w-[1122px] mx-auto">
           <Swiper
-            onBeforeInit={(swiper) => {
-              swiperRef.current = swiper;
-            }}
-            slidesPerView={2}
-            spaceBetween={10}
+            slidesPerView={2.5}
+            spaceBetween={37}
+            //   autoplay={{
+            //     delay: 2500,
+            //     disableOnInteraction: false,
+            //   }}
             centeredSlides={true}
-            onSlideChange={handleSlideChange}
+            speed={600}
+            parallax={true}
+            navigation={true}
             loop={true}
             pagination={{ clickable: true }}
-            autoplay={{ delay: 2500, disableOnInteraction: false }}
-            modules={[Pagination, EffectCoverflow, Autoplay]}
+            modules={[
+              Parallax,
+              Navigation,
+              EffectCoverflow,
+              Pagination,
+              Autoplay,
+            ]}
             effect="coverflow"
             coverflowEffect={{
-              stretch: 1,
-              depth: 50,
+              rotate: 20,
+              stretch: 2,
+              depth: 100,
               modifier: 1,
+              slideShadows: true,
             }}
             breakpoints={{
-              450: { spaceBetween: 20 },
-              768: { slidesPerView: 2.5, spaceBetween: 25 },
+              450: { spaceBetween: 30 },
+              600: { slidesPerView: 2.5, spaceBetween: 25 },
             }}
-            className="!py-14"
           >
             {platforms.map((platform, index) => (
               <SwiperSlide
                 key={index}
-                className="!h-[200px] flex  items-center justify-center rounded-sm overflow-hidden"
+                className="!h-[150px] sm:h-[200px] flex  rounded-md items-center justify-center"
               >
                 <div className="relative w-full h-full">
                   <img
                     src={platform.src}
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover rounded- object-center"
                     alt={platform.title}
                   />
-                  <h2 className="text-white absolute inset-0 flex items-end justify-start sm:px-4 px-2 pt-9 md:pt-10 pb-5 font-semibold text-sm font-inter">
+                  <h2 className="text-black z-40 relative flex items-center justify-center sm:px-4 px-2 pt-2 font-semibold text-sm font-inter">
                     {platform.title}
                   </h2>
                 </div>
@@ -107,14 +117,22 @@ const PlatformSlider: React.FC = () => {
       {/* Desktop Slider */}
       <div className="md:block hidden w-full">
         <Swiper
+          onBeforeInit={(swiper) => {
+            swiperRef.current = swiper;
+          }}
           slidesPerView={3}
           spaceBetween={10}
+          slidesPerGroup={3}
+          onSlideChange={handleSlideChange}
+          keyboard={{ enabled: true }}
+          speed={1000}
+          parallax={true}
+          grabCursor={true}
+          navigation={true}
           loop={true}
           pagination={{ clickable: true }}
-          navigation={true}
           modules={[Pagination, Navigation]}
           breakpoints={{
-            640: { slidesPerView: 2, spaceBetween: 20 },
             768: { slidesPerView: 2.5, spaceBetween: 25 },
             1024: { slidesPerView: 3, spaceBetween: 30 },
           }}
@@ -134,6 +152,24 @@ const PlatformSlider: React.FC = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+      <div className="hidden lg:flex absolute top-0 items-center w-full justify-center h-full">
+        <button
+          className={`swiper-button-prev -ml-[4%] rotate-180 ${
+            isBeginning ? "opacity-0 pointer-events-none" : ""
+          }`}
+          onClick={() => swiperRef.current?.slidePrev()}
+        >
+          <PrevButtton />
+        </button>
+        <button
+          className={`swiper-button-next -mr-[4%] ${
+            isEnd ? "opacity-0 pointer-events-none" : ""
+          }`}
+          onClick={() => swiperRef.current?.slideNext()}
+        >
+          <NextButton />
+        </button>
       </div>
     </section>
   );

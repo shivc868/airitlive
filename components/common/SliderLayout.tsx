@@ -6,20 +6,22 @@ import "swiper/css/navigation";
 import { Parallax, Pagination, Navigation } from "swiper/modules";
 import { NextButton, PrevButtton } from "./Icons";
 
-interface SuccessActionProps {
+interface SliderLayoutProps {
   children: React.ReactNode;
-  classname: React.ReactNode;
+  classname?: string;
   paginationClass?: string;
   prevIcon?: React.ReactNode;
   nextIcon?: React.ReactNode;
+  slidesPerView?: number; // Add this prop
 }
 
-const SliderLayout: React.FC<SuccessActionProps> = ({
+const SliderLayout: React.FC<SliderLayoutProps> = ({
   children,
   classname,
   paginationClass,
   prevIcon,
   nextIcon,
+  slidesPerView = 1.6, // Default value
 }) => {
   const swiperRef = useRef<any>(null);
   const [isBeginning, setIsBeginning] = useState(true);
@@ -31,14 +33,14 @@ const SliderLayout: React.FC<SuccessActionProps> = ({
 
   return (
     <div
-      className={`${classname} max-w-[846px] h-full rounded-[22px] w-full mx-auto success-in-action`}
+      className={`${classname} max-w-[846px] h-full rounded-[22px] w-full relative mx-auto success-in-action`}
     >
       <Swiper
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
         spaceBetween={37}
-        slidesPerView={1.16}
+        slidesPerView={slidesPerView} // Use the slidesPerView prop
         centeredSlides={true}
         onSlideChange={handleSlideChange}
         speed={600}
@@ -53,25 +55,25 @@ const SliderLayout: React.FC<SuccessActionProps> = ({
             {child}
           </SwiperSlide>
         ))}
-        <div className="flex items-center ">
-          <button
-            className={`swiper-button-prev  rotate-180 ${
-              isBeginning ? "opacity-0 pointer-events-none" : ""
-            }`}
-            onClick={() => swiperRef.current?.slidePrev()}
-          >
-            {prevIcon || <PrevButtton />}
-          </button>
-          <button
-            className={`swiper-button-next ${
-              isEnd ? "opacity-0 pointer-events-none" : ""
-            }`}
-            onClick={() => swiperRef.current?.slideNext()}
-          >
-            {nextIcon || <NextButton />}
-          </button>
-        </div>
       </Swiper>
+      <div className="hidden lg:flex absolute top-0 items-center w-full justify-center h-full">
+        <button
+          className={`swiper-button-prev -ml-[4%] rotate-180 ${
+            isBeginning ? "opacity-0 pointer-events-none" : ""
+          }`}
+          onClick={() => swiperRef.current?.slidePrev()}
+        >
+          {prevIcon || <PrevButtton />}
+        </button>
+        <button
+          className={`swiper-button-next -mr-[4%] ${
+            isEnd ? "opacity-0 pointer-events-none" : ""
+          }`}
+          onClick={() => swiperRef.current?.slideNext()}
+        >
+          {nextIcon || <NextButton />}
+        </button>
+      </div>
     </div>
   );
 };

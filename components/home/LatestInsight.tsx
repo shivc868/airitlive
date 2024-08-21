@@ -21,6 +21,7 @@ const LatestInsight: React.FC<LatestInsightProps> = ({ heading }) => {
     <main className="py-16">
       <h3 className="section-heading text-center mb-5 lg:mb-8">{heading}</h3>
       <SliderLayout
+        slidesPerView={1}
         classname="max-w-[940px] w-full h-full relative mx-auto"
         paginationClass="pagination-style-two"
         nextIcon={<InsightNext />}
