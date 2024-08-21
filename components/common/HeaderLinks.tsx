@@ -61,7 +61,7 @@ const HeaderLinks: React.FC = () => {
   ];
 
   return (
-    <div className="flex  gap-10 items-center">
+    <>
       {navLinks.map((navLink) => {
         return navLink.items.length > 0 ? (
           <DropdownMenu
@@ -77,7 +77,7 @@ const HeaderLinks: React.FC = () => {
           )
         );
       })}
-    </div>
+    </>
   );
 };
 
