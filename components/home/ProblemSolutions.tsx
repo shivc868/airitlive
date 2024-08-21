@@ -70,7 +70,7 @@ const ProblemSolutions = () => {
                           {problem.title}
                         </h3>
 
-                        <p className="text-white tracking-[0.21px] p-3 text-xs sm:text-sm  lg:text-[18px] font-lato leading-[1.2]">
+                        <p className="text-white p-3 text-xs sm:text-sm  lg:text-[18px] font-inter tracking-[0.217px] leading-[1.2]">
                           {problem.description}
                         </p>
                       </div>
