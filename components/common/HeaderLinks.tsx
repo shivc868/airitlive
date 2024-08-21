@@ -27,8 +27,21 @@ const HeaderLinks: React.FC = () => {
     {
       id: 2,
       title: "Solutions",
-      link: "/#solutions", // Simple link, no dropdown items
-      items: [], // No items for a dropdown
+
+      items: [
+        {
+          label: "Sports Monetization",
+          href: "/",
+        },
+        {
+          label: "News Monetization",
+          href: "/",
+        },
+        {
+          label: "Entertainment Monetization",
+          href: "/",
+        },
+      ],
     },
     {
       id: 3,
@@ -71,7 +84,11 @@ const HeaderLinks: React.FC = () => {
           />
         ) : (
           navLink.link && (
-            <Link className="nav-link" key={navLink.id} href={navLink.link}>
+            <Link
+              className="nav-link h-full"
+              key={navLink.id}
+              href={navLink.link}
+            >
               {navLink.title}
             </Link>
           )

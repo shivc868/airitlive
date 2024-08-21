@@ -56,7 +56,7 @@ const ProblemSolutions = () => {
                 spaceBetween: 30,
               },
               1024: {
-                spaceBetween: 100,
+                spaceBetween: 120,
               },
             }}
           >
@@ -66,7 +66,7 @@ const ProblemSolutions = () => {
                   <div className="transition-all flex-col grow flex h-full duration-300 group-hover:-translate-y-[calc(100%-60px)] relative z-10">
                     <div className=" grow h-full flex flex-col w-full">
                       <div className="pt-10 justify-between grow problem-solution-bg-gradient flex flex-col gap-24">
-                        <h3 className="text-sm sm:text-base md:text-xl lg:text-[30px] px-4 leading-[1.2] text-center text-white opacity-95 font-lato font-bold">
+                        <h3 className="text-sm  sm:text-base md:text-xl lg:text-3xl px-4 leading-[1.2] text-center text-white opacity-95 font-lato font-bold">
                           {problem.title}
                         </h3>
 

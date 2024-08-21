@@ -120,7 +120,7 @@ const WhyChoose = () => {
                   </h3>
                 </div>
 
-                <div className="rounded-lg cursor-pointer flex justify-start flex-col gap-2 p-4 h-full min-h-[300px] sm:min-h-[330px] pt-10 overflow-hidden card-back-side">
+                <div className="rounded-lg cursor-pointer flex justify-start flex-col gap-2 p-4 h-full min-h-[300px] sm:min-h-[330px] pt-10 overflow-hidden   card-back-side">
                   {offer.points.map((point, index) => (
                     <div className="flex gap-2 max-w-[254px] w">
                       <span className="mt-1.5 lg:mt-3 min-w-[10px]  max-h-[10px] max-w-[10px] min-h-[10px] bg-white rounded-full"></span>{" "}
