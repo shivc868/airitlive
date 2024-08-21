@@ -46,7 +46,6 @@ const Footer: React.FC = () => {
               <input
                 type="email"
                 required
-                autoFocus
                 placeholder="Email"
                 className="w-full py-1.5 mb-5 !bg-transparent  focus:outline-none text-white placeholder-text-light-gray text-xs font-bold border-b-[0.625px] border-main-bg"
               />
