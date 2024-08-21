@@ -1,13 +1,13 @@
 import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "swiper/css/parallax";
 import "swiper/css/keyboard";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/parallax";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import required modules
-import { Pagination, Navigation, Parallax, Keyboard } from "swiper/modules";
+import { Keyboard, Navigation, Parallax } from "swiper/modules";
 import { NextButton, PrevButtton } from "../common/Icons";
 import TailoredAIMobile from "./TailoredAIMobile";
 
@@ -147,7 +147,7 @@ const TailoredAI: React.FC<SuccessActionProps> = ({ prevIcon, nextIcon }) => {
               }`}
               onClick={() => swiperRef.current?.slidePrev()}
             >
-              {prevIcon || <PrevButtton />}
+              <PrevButtton />
             </button>
             <button
               className={`swiper-button-next -mr-[4%] ${
@@ -155,7 +155,7 @@ const TailoredAI: React.FC<SuccessActionProps> = ({ prevIcon, nextIcon }) => {
               }`}
               onClick={() => swiperRef.current?.slideNext()}
             >
-              {nextIcon || <NextButton />}
+              <NextButton />
             </button>
           </div>
           <h3 className="text-center text-xl lg:text-2xl text-thunder font-bold mt-4">

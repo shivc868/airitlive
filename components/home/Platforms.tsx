@@ -10,9 +10,7 @@ const Platforms = () => {
           Platforms We Monetize
         </h3>
 
-        <div>
-          <PlatformSlider />
-        </div>
+        <PlatformSlider />
       </div>
     </section>
   );

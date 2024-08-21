@@ -29,7 +29,7 @@ const SuccessAction = () => (
     </h3>
     <SliderLayout
       slidesPerView={1.14}
-      classname={undefined}
+      classname="max-w-[940px] w-full h-full relative mx-auto"
       paginationClass="pagination-style-one"
     >
       {slidesData.map((slide, index) => (

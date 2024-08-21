@@ -6,22 +6,20 @@ import "swiper/css/navigation";
 import { Parallax, Pagination, Navigation } from "swiper/modules";
 import { NextButton, PrevButtton } from "./Icons";
 
-interface SliderLayoutProps {
+interface SuccessActionProps {
   children: React.ReactNode;
-  classname?: string;
+  classname: React.ReactNode;
   paginationClass?: string;
-  prevIcon?: React.ReactNode;
-  nextIcon?: React.ReactNode;
-  slidesPerView?: number; // Add this prop
+  slidesPerView?: number;
+  isSpecialPage?: boolean;
 }
 
-const SliderLayout: React.FC<SliderLayoutProps> = ({
+const SliderLayout: React.FC<SuccessActionProps> = ({
   children,
   classname,
   paginationClass,
-  prevIcon,
-  nextIcon,
-  slidesPerView = 1.6, // Default value
+  slidesPerView = 1.6,
+  isSpecialPage = false,
 }) => {
   const swiperRef = useRef<any>(null);
   const [isBeginning, setIsBeginning] = useState(true);
@@ -33,14 +31,14 @@ const SliderLayout: React.FC<SliderLayoutProps> = ({
 
   return (
     <div
-      className={`${classname} max-w-[846px] h-full rounded-[22px] w-full relative mx-auto success-in-action`}
+      className={`${classname} max-w-[846px] relative h-full rounded-[22px] w-full mx-auto success-in-action`}
     >
       <Swiper
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
         spaceBetween={37}
-        slidesPerView={slidesPerView} // Use the slidesPerView prop
+        slidesPerView={slidesPerView}
         centeredSlides={true}
         onSlideChange={handleSlideChange}
         speed={600}
@@ -56,22 +54,22 @@ const SliderLayout: React.FC<SliderLayoutProps> = ({
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="hidden lg:flex absolute top-0 items-center w-full justify-center h-full">
+      <div className="flex items-center ">
         <button
-          className={`swiper-button-prev -ml-[4%] rotate-180 ${
-            isBeginning ? "opacity-0 pointer-events-none" : ""
-          }`}
+          className={`swiper-button-prev  lg:!w-11 ${
+            isSpecialPage ? "lg:-ml-16" : ""
+          }  rotate-180 ${isBeginning ? "opacity-0 pointer-events-none" : ""}`}
           onClick={() => swiperRef.current?.slidePrev()}
         >
-          {prevIcon || <PrevButtton />}
+          <PrevButtton />
         </button>
         <button
-          className={`swiper-button-next -mr-[4%] ${
-            isEnd ? "opacity-0 pointer-events-none" : ""
-          }`}
+          className={`swiper-button-next lg:!w-11 ${
+            isSpecialPage ? "lg:-mr-16" : ""
+          }   ${isEnd ? "opacity-0 pointer-events-none" : ""}`}
           onClick={() => swiperRef.current?.slideNext()}
         >
-          {nextIcon || <NextButton />}
+          <NextButton />
         </button>
       </div>
     </div>

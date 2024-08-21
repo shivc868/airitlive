@@ -1,8 +1,7 @@
 import React from "react";
-import SliderLayout from "../common/SliderLayout";
-import { InsightNext } from "../common/Icons";
 import { insightsData } from "../common/Helper";
 import InsightCard from "../common/InsightCard";
+import SliderLayout from "../common/SliderLayout";
 
 interface Insight {
   id: number;
@@ -24,7 +23,7 @@ const LatestInsight: React.FC<LatestInsightProps> = ({ heading }) => {
         slidesPerView={1}
         classname="max-w-[940px] w-full h-full relative mx-auto"
         paginationClass="pagination-style-two"
-        nextIcon={<InsightNext />}
+        isSpecialPage={true}
       >
         {insightsData.map((insight: Insight) => (
           <InsightCard key={insight.id} data={insight} className="" />
