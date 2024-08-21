@@ -17,7 +17,7 @@ interface LatestInsightProps {
 
 const LatestInsight: React.FC<LatestInsightProps> = ({ heading }) => {
   return (
-    <main className="py-16">
+    <main className="py-16 px-4">
       <h3 className="section-heading text-center mb-5 lg:mb-8">{heading}</h3>
       <SliderLayout
         slidesPerView={1}

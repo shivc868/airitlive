@@ -14,7 +14,7 @@ const ContactUs = () => {
             Ready to transform your media ecosystem?
           </h3>
           <SecondaryButton
-            className="h-8 md:h-11 text-base md:text-[22px]"
+            className="h-8 md:h-11 !px-3 text-base md:text-[22px]"
             icon={true}
           >
             Become a partner
