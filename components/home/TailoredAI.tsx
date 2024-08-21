@@ -142,7 +142,7 @@ const TailoredAI: React.FC<SuccessActionProps> = ({ prevIcon, nextIcon }) => {
           </Swiper>
           <div className="hidden lg:flex absolute top-0 items-center w-full justify-center h-full">
             <button
-              className={`swiper-button-prev -ml-[4%] rotate-180 ${
+              className={`swiper-button-prev xl:-ml-[4%] rotate-180 ${
                 isBeginning ? "opacity-0 pointer-events-none" : ""
               }`}
               onClick={() => swiperRef.current?.slidePrev()}
@@ -150,7 +150,7 @@ const TailoredAI: React.FC<SuccessActionProps> = ({ prevIcon, nextIcon }) => {
               <PrevButtton />
             </button>
             <button
-              className={`swiper-button-next -mr-[4%] ${
+              className={`swiper-button-next xl:-mr-[4%] ${
                 isEnd ? "opacity-0 pointer-events-none" : ""
               }`}
               onClick={() => swiperRef.current?.slideNext()}

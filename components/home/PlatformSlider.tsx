@@ -44,7 +44,7 @@ const PlatformSlider: React.FC = () => {
         <div className="relative max-w-[1122px] mx-auto">
           <Swiper
             slidesPerView={2.5}
-            spaceBetween={37}
+            spaceBetween={20}
             //   autoplay={{
             //     delay: 2500,
             //     disableOnInteraction: false,
@@ -83,7 +83,7 @@ const PlatformSlider: React.FC = () => {
                 <div className="relative w-full h-full">
                   <img
                     src={platform.src}
-                    className="w-full h-full object-cover rounded- object-center"
+                    className="w-full h-full object-cover rounded-sm rounded- object-center"
                     alt={platform.title}
                   />
                   <h2 className="text-black z-40 relative flex items-center justify-center sm:px-4 px-2 pt-2 font-semibold text-sm font-inter">
@@ -93,24 +93,6 @@ const PlatformSlider: React.FC = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="hidden lg:flex absolute top-10 items-center w-full justify-center h-full">
-            <button
-              className={`swiper-button-prev -ml-[4%] rotate-180 ${
-                isBeginning ? "opacity-0 pointer-events-none" : ""
-              }`}
-              onClick={() => swiperRef.current?.slidePrev()}
-            >
-              <PrevButtton />
-            </button>
-            <button
-              className={`swiper-button-next -mr-[4%] ${
-                isEnd ? "opacity-0 pointer-events-none" : ""
-              }`}
-              onClick={() => swiperRef.current?.slideNext()}
-            >
-              <NextButton />
-            </button>
-          </div>
         </div>
       </div>
 
@@ -155,7 +137,7 @@ const PlatformSlider: React.FC = () => {
       </div>
       <div className="hidden lg:flex absolute top-0 items-center w-full justify-center h-full">
         <button
-          className={`swiper-button-prev -ml-[4%] rotate-180 ${
+          className={`swiper-button-prev -mr-[2%] xl:-ml-[4%] rotate-180 ${
             isBeginning ? "opacity-0 pointer-events-none" : ""
           }`}
           onClick={() => swiperRef.current?.slidePrev()}
@@ -163,7 +145,7 @@ const PlatformSlider: React.FC = () => {
           <PrevButtton />
         </button>
         <button
-          className={`swiper-button-next -mr-[4%] ${
+          className={`swiper-button-next -mr-[2%] xl:-mr-[4%] ${
             isEnd ? "opacity-0 pointer-events-none" : ""
           }`}
           onClick={() => swiperRef.current?.slideNext()}
