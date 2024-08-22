@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import DropdownMenu from "./DropdownMenu";
+import AccordionMenu from "./AccordionMenu";
 
 // Define the type for each navigation link
 interface NavLink {
@@ -10,7 +11,12 @@ interface NavLink {
   items: { label: string; href: string }[]; // Array of items for dropdowns
 }
 
-const HeaderLinks: React.FC = () => {
+// Define the props type for the HeaderLinks component
+interface HeaderLinksProps {
+  showSidebar: boolean;
+}
+
+const HeaderLinks: React.FC<HeaderLinksProps> = ({ showSidebar }) => {
   const navLinks: NavLink[] = [
     {
       id: 1,
@@ -27,20 +33,10 @@ const HeaderLinks: React.FC = () => {
     {
       id: 2,
       title: "Solutions",
-
       items: [
-        {
-          label: "Sports Monetization",
-          href: "/",
-        },
-        {
-          label: "News Monetization",
-          href: "/",
-        },
-        {
-          label: "Entertainment Monetization",
-          href: "/",
-        },
+        { label: "Sports Monetization", href: "/" },
+        { label: "News Monetization", href: "/" },
+        { label: "Entertainment Monetization", href: "/" },
       ],
     },
     {
@@ -68,31 +64,43 @@ const HeaderLinks: React.FC = () => {
     {
       id: 4,
       title: "Contact",
-      link: "/contact", // Simple link, no dropdown items
-      items: [], // No items for a dropdown
+      link: "/contact",
+      items: [],
     },
   ];
 
   return (
     <>
       {navLinks.map((navLink) => {
-        return navLink.items.length > 0 ? (
-          <DropdownMenu
-            key={navLink.id}
-            buttonLabel={navLink.title}
-            items={navLink.items}
-          />
-        ) : (
-          navLink.link && (
-            <Link
-              className="nav-link h-full"
+        if (navLink.items.length > 0) {
+          return showSidebar ? (
+            <AccordionMenu
               key={navLink.id}
-              href={navLink.link}
-            >
-              {navLink.title}
-            </Link>
-          )
-        );
+              buttonLabel={navLink.title}
+              items={navLink.items}
+            />
+          ) : (
+            <DropdownMenu
+              key={navLink.id}
+              buttonLabel={navLink.title}
+              items={navLink.items}
+            />
+          );
+        } else {
+          return (
+            navLink.link && (
+              <Link
+                className={`nav-link py-4 ${
+                  showSidebar ? "px-4 md:px-8" : "p-4"
+                } h-full`}
+                key={navLink.id}
+                href={navLink.link}
+              >
+                {navLink.title}
+              </Link>
+            )
+          );
+        }
       })}
     </>
   );

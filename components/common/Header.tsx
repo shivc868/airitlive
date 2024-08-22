@@ -18,12 +18,15 @@ const Header = (props: IHeaderProps) => {
       document.body.style.overflow = "auto";
     }
   }, [showMobileNav]);
+
   return (
     <>
-      <section className={`z-[1000] px-8 w-full ${props.additionalclass}`}>
+      <section
+        className={`z-[1000] px-4 md:px-8 w-full ${props.additionalclass}`}
+      >
         <div className={styles.container}>
-          <nav className="py-4">
-            <header className="flex items-center justify-between">
+          <nav className="py-4 h-20 flex item-center w-full ">
+            <header className="flex items-center justify-between w-full">
               <Link href="/">
                 <img
                   src="/img/logo.png"
@@ -31,9 +34,9 @@ const Header = (props: IHeaderProps) => {
                   alt=""
                 />
               </Link>
-              <div className="hidden lg:flex items-center gap-16 justify-between">
-                <div className="flex gap-10">
-                  <HeaderLinks />
+              <div className="hidden lg:flex items-center gap-12 xl:gap-16 justify-between">
+                <div className="flex ">
+                  <HeaderLinks showSidebar={false} />
                 </div>
                 <Link href="/contact">
                   <button className="btn-primary">Get in touch</button>
@@ -53,11 +56,11 @@ const Header = (props: IHeaderProps) => {
         </div>
 
         {showMobileNav && (
-          <div className="lg:hidden py-4 left-0 flex justify-center items-center absolute bg-main-bg top-[83px] z-0 w-full">
-            <div className="flex items-center justify-center gap-6 flex-col">
-              <HeaderLinks />
-              <Link href="/contact">
-                <button className="btn-primary">Get in touch</button>
+          <div className="fixed overflow-auto scrollbar-hide left-0 z-[500000] lg:hidden block bottom-0 w-full h-[calc(100dvh-81px)] bg-main-bg">
+            <div className="flex items-start justify-center flex-col w-full">
+              <HeaderLinks showSidebar />
+              <Link href="/contact" className="py-5 px-4">
+                <button className="btn-primary ">Get in touch</button>
               </Link>
             </div>
           </div>

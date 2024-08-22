@@ -70,3 +70,6 @@
   left: 0;
   top: 0;
 }
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
