@@ -6,7 +6,7 @@ import { ExternalIcon } from "./Icons";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-9 sm:py-10 px-4  font-inter">
+    <footer className="bg-aswadBlack text-gray-300 py-9 sm:py-10 px-4  font-inter">
       <div className={styles.container}>
         <img src="/img/logo.png" className="hidden md:block w-[100px]" alt="" />
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-7 lg:gap-0 mt-3">
