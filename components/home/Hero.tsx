@@ -22,11 +22,12 @@ const Hero = () => {
           Revolutionizing monetization for Sports, News, and Entertainment.
         </p>
         <div className="flex sm:block justify-center">
-          <Link href="/contact">
-            <SecondaryButton className="border-[3px] lg:text-[28px]  !py-1.5 border-[#802BB1;]">
-              Get in touch
-            </SecondaryButton>
-          </Link>
+          <SecondaryButton
+            href="/contact"
+            className="border-[3px] lg:text-[28px]  !py-1.5 border-[#802BB1;]"
+          >
+            Get in touch
+          </SecondaryButton>
         </div>
       </div>
 
