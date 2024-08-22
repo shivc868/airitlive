@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="px-4">
+    <section id="hero" className="px-4">
       <div
         className={`${styles.container} py-28 sm:py-40 flex flex-col gap-4 sm:gap-6`}
       >

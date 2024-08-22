@@ -5,7 +5,7 @@ import PerformanceMetricsCards from "./PerformanceMetricsCards";
 
 const Amplify = () => {
   return (
-    <section className="px-4 py-24">
+    <section id="amplify" className="px-4 py-24">
       <div className={styles.container}>
         <div className="flex lg:flex-row flex-col items-center justify-between sm:gap-10 gap-6 md:gap-14 lg:gap-3">
           <div className="flex flex-col gap-3">

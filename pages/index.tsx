@@ -13,15 +13,19 @@ import WhyChoose from "@/components/home/WhyChoose";
 import { Inter } from "next/font/google";
 import LatestInsight from "@/components/home/LatestInsight";
 import TailoredAI from "@/components/home/TailoredAI";
+import AnimBox from "@/components/common/AnimBox";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
-      <main className="bg-main-bg">
-        <Header additionalclass="relative border-b-[2px] border-[#564F6F] bg-main-bg " />
-        <Hero />
+      <AnimBox />
+      <main className="relative z-10">
+        <div id="hero-wrapper">
+          <Header additionalclass="relative border-b-[2px] border-[#564F6F] " />
+          <Hero />
+        </div>
         <Amplify />
         <Platforms />
         <MediaNetwork />
