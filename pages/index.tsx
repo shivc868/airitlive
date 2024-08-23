@@ -24,12 +24,16 @@ export default function Home() {
   const lenis = useLenis(({ scroll }) => {
     // called every scroll
   });
+
   return (
     <>
       <ReactLenis root>
         <main className="relative z-10">
           <div id="hero-wrapper">
-            <Header additionalclass="relative border-b-[2px] border-[#564F6F] " />
+            <Header
+              lenis={lenis}
+              additionalclass="relative border-b-[2px] border-[#564F6F] "
+            />
             <Hero />
           </div>
           <Amplify />

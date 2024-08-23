@@ -34,7 +34,13 @@ const AccordionMenu: React.FC<AccordionMenuProps> = ({
         <span className="text-base font-lato font-medium leading-none">
           {buttonLabel}
         </span>
-        {isOpen ? <RightArrowIcon /> : <DownArrow />}
+        <span
+          className={`flex transition-all duration-200 ${
+            isOpen ? "rotate-90" : ""
+          }`}
+        >
+          <RightArrowIcon />
+        </span>
       </button>
       <AnimateHeight
         duration={500}

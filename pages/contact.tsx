@@ -9,11 +9,12 @@ const contact = () => {
   const lenis = useLenis(({ scroll }) => {
     // called every scroll
   });
+
   return (
     <>
       <ReactLenis root>
         <main className="relative z-10">
-          <Header additionalclass="" />
+          <Header lenis={lenis} additionalclass="" />
           <ContactHero />
           <ContactUs />
           <Footer />

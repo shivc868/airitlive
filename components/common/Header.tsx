@@ -3,22 +3,30 @@ import { CloseIcon, MenuIcon } from "./AppIcons";
 import HeaderLinks from "./HeaderLinks";
 import { styles } from "./style";
 import Link from "next/link";
-
+// import ReactLenis, { useLenis } from "@studio-freight/react-lenis";
 interface IHeaderProps {
   additionalclass: string;
+  lenis: any;
 }
 
-const Header = (props: IHeaderProps) => {
-  const [showMobileNav, setShowMobileNav] = useState(false);
+const Header: React.FC<IHeaderProps> = (props) => {
+  const [showMobileNav, setShowMobileNav] = useState<boolean>(false); // Explicitly type the state
+
+  // useEffect(() => {
+  //   if (showMobileNav) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "auto";
+  //   }
+  // }, [showMobileNav]);
 
   useEffect(() => {
     if (showMobileNav) {
-      document.body.style.overflow = "hidden";
+      props.lenis?.stop();
     } else {
-      document.body.style.overflow = "auto";
+      props.lenis?.start();
     }
   }, [showMobileNav]);
-
   return (
     <>
       <section
@@ -31,11 +39,11 @@ const Header = (props: IHeaderProps) => {
                 <img
                   src="/img/logo.png"
                   className="w-[80px] lg:w-[100px]"
-                  alt=""
+                  alt="Logo"
                 />
               </Link>
               <div className="hidden lg:flex items-center gap-12 xl:gap-16 justify-between">
-                <div className="flex ">
+                <div className="flex">
                   <HeaderLinks showSidebar={false} />
                 </div>
                 <Link href="/contact">
@@ -54,23 +62,22 @@ const Header = (props: IHeaderProps) => {
             </header>
           </nav>
         </div>
-
-        {showMobileNav && (
-          <div className="fixed overflow-auto scrollbar-hide left-0 z-[500000] lg:hidden block bottom-0 w-full h-[calc(100dvh-81px)] bg-main-bg">
-            <div className="flex items-start justify-center flex-col w-full">
-              <HeaderLinks showSidebar />
-              <Link href="/contact" className="py-5 px-4">
-                <button className="btn-primary ">Get in touch</button>
-              </Link>
-            </div>
-          </div>
-        )}
       </section>
       {showMobileNav && (
         <div
           onClick={() => setShowMobileNav(false)}
           className="fixed top-0 left-0 bg-black bg-opacity-40 h-screen w-full z-[10]"
         ></div>
+      )}
+      {showMobileNav && (
+        <div className="fixed bg-[#CD9EE9] overflow-hidden scrollbar-hide left-0 z-[500000] lg:hidden block bottom-0 w-full min-h-[calc(100dvh-81px)] max-h-[calc(100dvh-81px)]">
+          <div className="flex h-full overflow-auto items-start justify-center flex-col w-full">
+            <HeaderLinks showSidebar />
+            <Link href="/contact" className="py-5 px-4">
+              <button className="btn-primary">Get in touch</button>
+            </Link>
+          </div>
+        </div>
       )}
     </>
   );
