@@ -23,7 +23,7 @@ const MediaNetwork = () => {
           />
         ))}
       </div>
-      <SecondaryButton className="mx-auto mt-[30px]">
+      <SecondaryButton className="mx-auto !py-1.5 mt-[30px]">
         More clients
       </SecondaryButton>
     </section>
