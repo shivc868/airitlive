@@ -126,7 +126,7 @@ const AnimBox = () => {
   return (
     <>
       <canvas
-        className="fixed top-0 left-0 z-0 opacity-30 w-full h-full"
+        className="fixed top-0 left-0 z-0 opacity-20 w-full h-full"
         ref={canvasRef}
         style={{ display: "block" }}
       />

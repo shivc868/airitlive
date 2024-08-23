@@ -79,11 +79,11 @@ const ProblemSolutions = () => {
                       <ArrowIcon />
                     </div>
                   </div>
-                  <div className="absolute top-0 left-0 h-full w-full z-0 gap-4 flex flex-col justify-center items-center">
-                    <h2 className="font-lato text-center gradient-hero-main-text text-[40px] pt-10 leading-[1.2">
+                  <div className="absolute top-0 left-0 h-full w-full z-0 gap-2 sm:gap-4 flex flex-col justify-center items-center">
+                    <h2 className="font-lato text-center gradient-hero-main-text text-[20px] sm:text-[30px] md:text-[40px] pt-5 sm:pt-10 leading-[1.2]">
                       {problem.solutionTitle}
                     </h2>
-                    <p className="text-white text-center leading-[1.2] text-base p-4">
+                    <p className="text-white text-center leading-[1.2] text-base p-2 sm:p-4">
                       {problem.solutionDescription}
                     </p>
                   </div>
