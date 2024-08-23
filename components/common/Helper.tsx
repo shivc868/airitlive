@@ -71,6 +71,8 @@ export const networks = [
   { src: "/img/fox-sports.webp", alt: "Fox Sports" },
   { src: "/img/epsilon.png", alt: "Epsilon" },
   { src: "/img/news18.webp", alt: "News18" },
+  { src: "/img/major-league-partner.png", alt: "News18" },
+  { src: "/img/news-network.png", alt: "News18" },
 ];
 export const testimonialData = [
   {
@@ -78,7 +80,7 @@ export const testimonialData = [
     name: "Suzy Ryder",
     role: "Chief Digital Officer",
     company: "OMD UK",
-    image: "/img/profile.png",
+    image: "/img/client-1.jpg",
     feedback:
       "Airit provides a viable path toward a cleaner, greener digital media ecosystem. OMD UK is proud to be an anchor partner for this initiative, bringing more awareness and real solutions to the entire digital media ecosystem.",
   },
@@ -87,7 +89,7 @@ export const testimonialData = [
     name: "John Doe",
     role: "Marketing Director",
     company: "ABC Corp",
-    image: "/img/profile.png",
+    image: "/img/client-2.jpg",
     feedback:
       "Airit has transformed the way we approach digital media. Their commitment to sustainability is commendable.",
   },
@@ -96,7 +98,7 @@ export const testimonialData = [
     name: "Jane Smith",
     role: "Product Manager",
     company: "XYZ Ltd",
-    image: "/img/profile.png",
+    image: "/img/client-3.jpg",
     feedback:
       "We are thrilled with the impact Airit has had on our digital strategy. The results speak for themselves.",
   },
@@ -105,7 +107,7 @@ export const testimonialData = [
     name: "Emily Davis",
     role: "Head of Operations",
     company: "Tech Innovators",
-    image: "/img/profile.png",
+    image: "/img/client-4.jpeg",
     feedback:
       "Airit's approach to sustainability in digital media is both innovative and effective. We're proud to be a part of this journey.",
   },
@@ -114,7 +116,7 @@ export const testimonialData = [
     name: "Michael Brown",
     role: "CEO",
     company: "GreenTech Solutions",
-    image: "/img/profile.png",
+    image: "/img/client-5.jpg",
     feedback:
       "Partnering with Airit has been a game-changer for our business. Their focus on green digital solutions aligns perfectly with our values.",
   },
@@ -123,7 +125,7 @@ export const testimonialData = [
     name: "Sarah Johnson",
     role: "Creative Director",
     company: "Creative Minds",
-    image: "/img/profile.png",
+    image: "/img/client-6.jpg",
     feedback:
       "Airit has empowered us to rethink our digital media strategy. Their dedication to sustainability is inspiring.",
   },
@@ -132,7 +134,7 @@ export const testimonialData = [
     name: "David Wilson",
     role: "Chief Technology Officer",
     company: "Innovate Corp",
-    image: "/img/profile.png",
+    image: "/img/client-7.jpg",
     feedback:
       "Airit's platform has enabled us to reduce our carbon footprint while maintaining a strong digital presence.",
   },

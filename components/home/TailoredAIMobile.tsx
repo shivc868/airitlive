@@ -25,10 +25,10 @@ const TailoredAIMobile: React.FC<SuccessActionMobileProps> = ({
         <Swiper
           slidesPerView={1.79}
           spaceBetween={25}
-          //   autoplay={{
-          //     delay: 2500,
-          //     disableOnInteraction: false,
-          //   }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
           centeredSlides={true}
           speed={600}
           parallax={true}

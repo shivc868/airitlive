@@ -26,7 +26,7 @@ const TestimoniaCard: React.FC<TestimoniaCardProps> = ({ data }) => {
       <div className="flex items-center gap-5 border-t pt-1.5 border-[rgba(0,0,0,0.51)]">
         <Image
           width={60}
-          className="max-w-11 lg:max-w-[60px] object-contain"
+          className="min-h-11 max-w-11  lg:min-h-[60px] max-h-[60px] lg:max-w-[60px] object-cover"
           height={60}
           alt={data.name}
           src={data.image}

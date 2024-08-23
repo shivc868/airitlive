@@ -32,10 +32,6 @@ const tailoredAi = [
         src: "/img/sponsrship.webp",
         title: "Sponsorship Performance Tracking",
       },
-      {
-        src: "/img/sponsrship.webp",
-        title: "Sponsorship Performance Tracking",
-      },
     ],
   },
   {
@@ -43,10 +39,6 @@ const tailoredAi = [
     items: [
       { src: "/img/breaking-news.webp", title: "Breaking News Alert" },
       { src: "/img/add.webp", title: "Context Aware Ad Placement" },
-      {
-        src: "/img/cross.webp",
-        title: "Cross Platform Story Flow Optimization",
-      },
       {
         src: "/img/cross.webp",
         title: "Cross Platform Story Flow Optimization",
@@ -59,9 +51,37 @@ const tailoredAi = [
       { src: "/img/friendly-app.webp", title: "Binge-friendly Ad Experience" },
       { src: "/img/content.webp", title: "Content Matched Brand Integration" },
       { src: "/img/viewer-journey.webp", title: "Viewer Journey Monetization" },
-      { src: "/img/viewer-journey.webp", title: "Viewer Journey Monetization" },
     ],
   },
+];
+
+const sports = [
+  {
+    src: "/img/real-time.webp",
+    title: "Real Time Ad Insertion During Live Sport Events",
+  },
+  { src: "/img/fan-engagement.webp", title: "Fan Engagement Optimization" },
+  {
+    src: "/img/sponsrship.webp",
+    title: "Sponsorship Performance Tracking",
+  },
+  { src: "/img/fan-engagement.webp", title: "Fan Engagement Optimization" },
+];
+const news = [
+  { src: "/img/breaking-news.webp", title: "Breaking News Alert" },
+  { src: "/img/add.webp", title: "Context Aware Ad Placement" },
+  {
+    src: "/img/cross.webp",
+    title: "Cross Platform Story Flow Optimization",
+  },
+  { src: "/img/add.webp", title: "Context Aware Ad Placement" },
+];
+
+const entertainment = [
+  { src: "/img/friendly-app.webp", title: "Binge-friendly Ad Experience" },
+  { src: "/img/content.webp", title: "Content Matched Brand Integration" },
+  { src: "/img/viewer-journey.webp", title: "Viewer Journey Monetization" },
+  { src: "/img/content.webp", title: "Content Matched Brand Integration" },
 ];
 
 const TailoredAI: React.FC<SuccessActionProps> = ({ prevIcon, nextIcon }) => {
@@ -165,12 +185,9 @@ const TailoredAI: React.FC<SuccessActionProps> = ({ prevIcon, nextIcon }) => {
         </div>
       </div>
       <div className="block md:hidden w-full">
-        {tailoredAi.map((category) => (
-          <TailoredAIMobile
-            key={category.category}
-            slidesData2={category.items}
-          />
-        ))}
+        <TailoredAIMobile slidesData2={sports} />
+        <TailoredAIMobile slidesData2={news} />
+        <TailoredAIMobile slidesData2={entertainment} />
       </div>
     </section>
   );

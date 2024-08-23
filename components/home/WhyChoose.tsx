@@ -100,11 +100,11 @@ const WhyChoose = () => {
         <h3 className="text-center pb-12 section-heading">
           Why Choose AirItLive?
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-content-center place-items-center gap-1">
+        <div className="grid grid-cols-3 place-content-center place-items-center gap-1">
           {offerings.map((offer, i) => (
             <div
               key={i}
-              className="h-[300px] max-w-[290px] w-full sm:h-[330px] rounded-[10px]"
+              className=" min-h-[140px] sm:min-h-[250px] md:min-h-[320px] max-w-[290px] w-full rounded-[10px]"
               onMouseEnter={() => handleMouseEnter(i)}
               onMouseLeave={() => handleMouseLeave(i)}
             >
@@ -114,19 +114,19 @@ const WhyChoose = () => {
                 flipSpeedBackToFront={1.5}
                 flipSpeedFrontToBack={1.5}
               >
-                <div className="rounded-lg cursor-pointer flex flex-col justify-center items-start h-full min-h-[300px] sm:min-h-[330px] overflow-hidden card-front-side">
-                  <h3 className="text-lg lg:text-[22px] h-[125px] font-lato font-normal  px-4 text-white">
+                <div className="rounded-lg cursor-pointer flex flex-col justify-center items-start h-full min-h-[140px] sm:min-h-[250px] md:min-h-[320px] overflow-hidden card-front-side">
+                  <h3 className="text-xs sm:text-base md:text-lg lg:text-[22px] h-[70px] sm:h-[125px] font-lato font-normal  px-4 text-white">
                     {offer.title}
                   </h3>
                 </div>
 
-                <div className="rounded-lg cursor-pointer flex justify-start flex-col gap-2 p-4 h-full min-h-[300px] sm:min-h-[330px] pt-10 overflow-hidden   card-back-side">
+                <div className="rounded-lg cursor-pointer flex justify-start flex-col gap-1 md:gap-2 p-2 sm:p-4 h-full min-h-[140px] sm:min-h-[250px] md:min-h-[320px] pt-3 sm:pt-10 overflow-hidden   card-back-side">
                   {offer.points.map((point, index) => (
-                    <div className="flex gap-2 max-w-[254px] w">
-                      <span className="mt-1.5 lg:mt-3 min-w-[10px]  max-h-[10px] max-w-[10px] min-h-[10px] bg-white rounded-full"></span>{" "}
+                    <div className="flex gap-1 md:gap-2 max-w-[254px]">
+                      <span className="mt-1.5 lg:mt-3 min-w-1 max-w-1 min-h-1 max-h-1 md:min-w-[10px]   md:max-h-[10px] md:max-w-[10px] md:min-h-[10px] bg-white rounded-full"></span>{" "}
                       <li
                         key={index}
-                        className="text-white leading-[1.2] list-none font-normal font-lato text-lg sm:text-xl lg:text-2xl"
+                        className="text-white leading-[1.2] list-none font-normal font-lato text-[9px] sm:text-xs md:text-xl lg:text-2xl"
                       >
                         {point}
                       </li>

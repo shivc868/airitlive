@@ -84,7 +84,10 @@ const PlatformSlider: React.FC = () => {
                 className="!h-[150px] sm:h-[200px] flex  rounded-md items-center justify-center"
               >
                 <div className="relative w-full h-full">
-                  <ImageMagnifier src={platform.src} />
+                  <ImageMagnifier
+                    height="!min-h-[150px] sm:h-[200px]"
+                    src={platform.src}
+                  />
                   <h2 className="text-black z-40 relative flex items-center justify-center sm:px-4 px-2 pt-2 font-semibold text-sm font-inter">
                     {platform.title}
                   </h2>
