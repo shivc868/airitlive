@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const AnimBox = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [images, setImages] = useState<HTMLImageElement[]>([]);
-  const frameCount = 122; // Total number of images
+  const frameCount = 122;
 
   useEffect(() => {
     // Preload images and ensure they are fully loaded
@@ -88,7 +88,7 @@ const AnimBox = () => {
                 start: "top top",
                 end: "bottom bottom",
                 scrub: 1,
-                markers: true,
+                markers: false,
 
                 onUpdate: (self) => {
                   const index = Math.floor(self.progress * (frameCount - 1));
@@ -110,7 +110,7 @@ const AnimBox = () => {
       const newNumber = parseFloat(Math.random().toFixed(2));
       setRandomNumberLeft(newNumber);
       console.log(newNumber);
-    }, 3000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
@@ -119,7 +119,7 @@ const AnimBox = () => {
       const newNumber = parseFloat(Math.random().toFixed(2));
       setRandomNumberRight(newNumber);
       console.log(newNumber);
-    }, 2500);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
@@ -133,10 +133,12 @@ const AnimBox = () => {
       <motion.div
         style={{
           top: 100 * randomNumberLeft + "%",
-          bottom: 100 * randomNumberLeft + "%",
-          rotate: 360 * randomNumberLeft + "%",
+          left: 100 * randomNumberLeft + "%",
+          rotate: 360 * randomNumberLeft,
+          scale: 3 * randomNumberLeft,
+          opacity: 0.24 * randomNumberLeft,
         }}
-        className="rounded-full transition-all opacity-[0.34] duration-[2s] ease-linear fixed w-[45vw] h-[56vh] blur-[40px]"
+        className="rounded-full transition-all opacity-[0.24] duration-[2s] ease-linear fixed w-[45vw] h-[56vh] blur-[40px]"
       >
         <img
           src="/img/moving-left.png"
@@ -146,10 +148,12 @@ const AnimBox = () => {
       <motion.div
         style={{
           top: 100 * randomNumberRight + "%",
-          bottom: 100 * randomNumberRight + "%",
-          rotate: 360 * randomNumberRight + "%",
+          left: 100 * randomNumberRight + "%",
+          rotate: 360 * randomNumberRight,
+          scale: 3 * randomNumberRight,
+          opacity: 0.24 * randomNumberRight,
         }}
-        className="rounded-full transition-all opacity-[0.34] duration-[2s] ease-linear fixed w-[45vw] h-[56vh] blur-[40px]"
+        className="rounded-full transition-all opacity-[0.24] duration-[2s] ease-linear fixed w-[45vw] h-[56vh] blur-[40px]"
       >
         <img
           src="/img/moving-right.png"
