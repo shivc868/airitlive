@@ -14,7 +14,7 @@ interface DropdownMenuProps {
 const DropdownMenu: React.FC<DropdownMenuProps> = ({ buttonLabel, items }) => {
   return (
     <Menu as="div" className="relative min-h-full">
-      <MenuButton className="nav-link">{buttonLabel}</MenuButton>
+      <MenuButton className="nav-link p-4">{buttonLabel}</MenuButton>
       <MenuItems className="absolute mt-2 bg-[#F5E7FF]   w-fit border border-gray-300 rounded-md shadow-lg z-50">
         {items.map((item, index) => (
           <MenuItem key={index}>

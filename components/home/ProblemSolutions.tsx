@@ -80,7 +80,7 @@ const ProblemSolutions = () => {
                     </div>
                   </div>
                   <div className="absolute top-0 left-0 h-full w-full z-0 gap-4 flex flex-col justify-center items-center">
-                    <h2 className="font-lato gradient-hero-main-text text-[40px] pt-10 leading-[1.2">
+                    <h2 className="font-lato text-center gradient-hero-main-text text-[40px] pt-10 leading-[1.2">
                       {problem.solutionTitle}
                     </h2>
                     <p className="text-white text-center leading-[1.2] text-base p-4">

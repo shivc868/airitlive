@@ -10,9 +10,8 @@
   .nav-link {
     @apply text-thunder text-base font-lato;
   }
-
   .section-heading {
-    @apply text-thunder  font-bold font-lato text-2xl  sm:text-3xl lg:text-4xl xl:text-[40px];
+    @apply text-thunder  font-bold font-lato text-2xl  sm:text-3xl lg:text-[40px];
   }
   .input-style {
     @apply text-sm bg-transparent placeholder:text-thunder text-black lg:text-base pt-1.5 pb-2.5 border-thunder focus:outline-none border-b  font-light font-inter;
@@ -70,4 +69,7 @@
   height: calc(100% + 1px);
   left: 0;
   top: 0;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

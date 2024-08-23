@@ -36,9 +36,9 @@ const UnifiedPower: React.FC = () => {
         </div>
       </div>
       <div className="flex justify-center mt-12">
-        <Link href="/contact">
-          <SecondaryButton className="mt-11">Contact Us</SecondaryButton>
-        </Link>
+        <SecondaryButton href="/contact" className="mt-11">
+          Contact Us
+        </SecondaryButton>
       </div>
     </section>
   );
