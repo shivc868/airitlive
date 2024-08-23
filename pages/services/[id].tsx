@@ -16,12 +16,13 @@ const ServicesPage = () => {
   const lenis = useLenis(({ scroll }) => {
     // called every scroll
   });
+
   return (
     <>
       <ReactLenis root>
         <main className="relative z-10">
           <div className="bg-[url(/img/services-bg-img.png)] bg-cover bg-bottom w-full sm:pb-20">
-            <Header additionalclass="absolute" />
+            <Header lenis={lenis} additionalclass="absolute" />
             <ServicesHero />
             <ServicesLogos />
           </div>

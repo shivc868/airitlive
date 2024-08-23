@@ -1,7 +1,7 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import AnimateHeight from "react-animate-height";
-import { DownArrow, RightArrowIcon } from "./Icons";
+import { RightArrowIcon } from "./Icons";
 
 interface MenuItemType {
   label: string;
@@ -11,35 +11,36 @@ interface MenuItemType {
 interface AccordionMenuProps {
   buttonLabel: string;
   items: MenuItemType[];
+  isOpen: boolean;
+  toggleAccordion: (label: string) => void;
 }
 
 const AccordionMenu: React.FC<AccordionMenuProps> = ({
   buttonLabel,
   items,
+  isOpen,
+  toggleAccordion,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [height, setHeight] = useState<"auto" | number>(0);
-
-  const toggleAccordion = () => {
-    setIsOpen(!isOpen);
-    setHeight(isOpen ? 0 : "auto");
-  };
-
   return (
     <div className="accordion w-full">
       <button
-        onClick={toggleAccordion}
-        className="flex justify-between  gap-2 items-center w-full h-14 py-4 px-4 md:px-8 border-thunder border-opacity-20 border-b"
+        onClick={() => toggleAccordion(buttonLabel)}
+        aria-expanded={isOpen}
+        aria-controls={`expand-${buttonLabel}`}
+        className="flex justify-between gap-2 items-center w-full h-14 py-4 px-4 md:px-8 border-thunder border-opacity-20 border-b"
       >
         <span className="text-base font-lato font-medium leading-none">
           {buttonLabel}
         </span>
-        {isOpen ? <RightArrowIcon /> : <DownArrow />}
+        <span
+          className={`flex transition-all duration-200 ${
+            isOpen ? "rotate-90" : ""
+          }`}
+        >
+          <RightArrowIcon />
+        </span>
       </button>
-      <AnimateHeight
-        duration={500}
-        height={height} // 0 -> Auto
-      >
+      <AnimateHeight id={`expand-${buttonLabel}`} height={isOpen ? "auto" : 0}>
         <div className="py-2.5 px-4 md:px-8">
           {items.map((item, index) => (
             <Link key={index} href={item.href}>

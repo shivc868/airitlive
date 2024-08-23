@@ -1,7 +1,6 @@
 import React from "react";
 import { styles } from "../common/style";
 import PlatformSlider from "./PlatformSlider";
-
 const Platforms = () => {
   return (
     <section id="plateforms" className="md:px-4 pb-14">
