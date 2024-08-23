@@ -1,13 +1,13 @@
 "use client";
-
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import dynamic from "next/dynamic";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 import "swiper/css/autoplay";
-
+// import Magnifier from "react-magnifier";
 // Import required modules
 import {
   Pagination,
@@ -17,6 +17,8 @@ import {
   Parallax,
 } from "swiper/modules";
 import { NextButton, PrevButtton } from "../common/Icons";
+// @ts-ignore
+const Magnifier = dynamic(() => import("react-magnifier"), { ssr: false });
 
 const platforms = [
   { src: "/img/platform-1.png", title: "CTV" },
@@ -81,11 +83,24 @@ const PlatformSlider: React.FC = () => {
                 className="!h-[150px] sm:h-[200px] flex  rounded-md items-center justify-center"
               >
                 <div className="relative w-full h-full">
-                  <img
+                  <Magnifier
                     src={platform.src}
+                    width={"100%"}
                     className="w-full h-full object-cover rounded-sm rounded- object-center"
-                    alt={platform.title}
+                    height={"100%"}
+                    zoomImgSrc={platform.src}
+                    zoomFactor={2}
+                    mgWidth={90}
+                    mgHeight={90}
+                    mgBorderWidth={1}
+                    mgShape={"circle"}
+                    mgShowOverflow={false}
+                    mgMouseOffsetX={2}
+                    mgMouseOffsetY={2}
+                    mgTouchOffsetX={2}
+                    mgTouchOffsetY={2}
                   />
+
                   <h2 className="text-black z-40 relative flex items-center justify-center sm:px-4 px-2 pt-2 font-semibold text-sm font-inter">
                     {platform.title}
                   </h2>
@@ -122,10 +137,22 @@ const PlatformSlider: React.FC = () => {
           {platforms.map((platform, index) => (
             <SwiperSlide key={index} className="flex items-center">
               <div className="relative w-full h-[220px]">
-                <img
+                <Magnifier
                   src={platform.src}
+                  width={"100%"}
                   className="w-full h-full object-cover object-center"
-                  alt={platform.title}
+                  height={"100%"}
+                  zoomImgSrc={platform.src}
+                  zoomFactor={2}
+                  mgWidth={90}
+                  mgHeight={90}
+                  mgBorderWidth={1}
+                  mgShape={"circle"}
+                  mgShowOverflow={false}
+                  mgMouseOffsetX={2}
+                  mgMouseOffsetY={2}
+                  mgTouchOffsetX={2}
+                  mgTouchOffsetY={2}
                 />
                 <h2 className="text-center text-thunder text-lg font-inter mt-2">
                   {platform.title}
