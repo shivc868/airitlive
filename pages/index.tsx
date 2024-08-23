@@ -16,18 +16,17 @@ import LatestInsight from "@/components/home/LatestInsight";
 import TailoredAI from "@/components/home/TailoredAI";
 import AnimBox from "@/components/common/AnimBox";
 
-import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
+import { useLenis } from "@studio-freight/react-lenis";
+import LenisWrapper from "@/components/common/LenisWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const lenis = useLenis(({ scroll }) => {
-    // called every scroll
-  });
+  const lenis = useLenis(({ scroll }) => {});
 
   return (
     <>
-      <ReactLenis root>
+      <LenisWrapper>
         <main className="relative z-10">
           <div id="hero-wrapper">
             <Header
@@ -50,7 +49,7 @@ export default function Home() {
           <Footer />
         </main>
         <AnimBox />
-      </ReactLenis>
+      </LenisWrapper>
     </>
   );
 }

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import DropdownMenu from "./DropdownMenu";
 import AccordionMenu from "./AccordionMenu";
 
@@ -17,6 +17,11 @@ interface HeaderLinksProps {
 }
 
 const HeaderLinks: React.FC<HeaderLinksProps> = ({ showSidebar }) => {
+  const [openAccordion, setOpenAccordion] = useState<string | null>(null);
+
+  const toggleAccordion = (label: string) => {
+    setOpenAccordion(openAccordion === label ? null : label);
+  };
   const navLinks: NavLink[] = [
     {
       id: 1,
@@ -78,6 +83,8 @@ const HeaderLinks: React.FC<HeaderLinksProps> = ({ showSidebar }) => {
               key={navLink.id}
               buttonLabel={navLink.title}
               items={navLink.items}
+              isOpen={openAccordion === navLink.title}
+              toggleAccordion={toggleAccordion}
             />
           ) : (
             <DropdownMenu
