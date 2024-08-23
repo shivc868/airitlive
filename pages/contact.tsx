@@ -12,7 +12,7 @@ const contact = () => {
   return (
     <>
       <ReactLenis root>
-        <main className="bg-main-bg">
+        <main className="relative z-10">
           <Header additionalclass="" />
           <ContactHero />
           <ContactUs />
