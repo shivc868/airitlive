@@ -16,6 +16,12 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/home/SuccessAction.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "components/home/SuccessAction.jsx",
+    "components/hooks/useLenis.tsx"
+  ],
   "exclude": ["node_modules"]
 }

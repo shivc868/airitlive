@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.1.2",
+    "@studio-freight/lenis": "^1.0.42",
+    "@studio-freight/react-lenis": "^0.0.47",
+    "framer-motion": "^11.3.29",
     "gsap": "^3.12.5",
     "next": "14.2.5",
     "react": "^18",

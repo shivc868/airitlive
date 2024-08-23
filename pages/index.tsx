@@ -1,3 +1,4 @@
+"use  client";
 import ContactUs from "@/components/common/contactus/ContactUs";
 import Footer from "@/components/common/Footer";
 import Header from "@/components/common/Header";
@@ -15,30 +16,37 @@ import LatestInsight from "@/components/home/LatestInsight";
 import TailoredAI from "@/components/home/TailoredAI";
 import AnimBox from "@/components/common/AnimBox";
 
+import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const lenis = useLenis(({ scroll }) => {
+    // called every scroll
+  });
   return (
     <>
-      <AnimBox />
-      <main className="relative z-10">
-        <div id="hero-wrapper">
-          <Header additionalclass="relative border-b-[2px] border-[#564F6F] " />
-          <Hero />
-        </div>
-        <Amplify />
-        <Platforms />
-        <MediaNetwork />
-        <ProblemSolutions />
-        <WhyChoose />
-        <TailoredAI />
-        <UnifiedPower />
-        <SuccessAction />
-        <Testimonial />
-        <ContactUs />
-        <LatestInsight heading="Latest Insights From Airit" />
-        <Footer />
-      </main>
+      <ReactLenis root>
+        <main className="relative z-10">
+          <div id="hero-wrapper">
+            <Header additionalclass="relative border-b-[2px] border-[#564F6F] " />
+            <Hero />
+          </div>
+          <Amplify />
+          <Platforms />
+          <MediaNetwork />
+          <ProblemSolutions />
+          <WhyChoose />
+          <TailoredAI />
+          <UnifiedPower />
+          <SuccessAction />
+          <Testimonial />
+          <ContactUs />
+          <LatestInsight heading="Latest Insights From Airit" />
+          <Footer />
+        </main>
+        <AnimBox />
+      </ReactLenis>
     </>
   );
 }
