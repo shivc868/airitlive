@@ -28,7 +28,7 @@ const ProblemSolutions = () => {
   return (
     <section id="solutions" className="px-4 max-w-[920px]  mx-auto">
       <div className={styles.container}>
-        <h2 className="section-heading py-14 text-center">Problems we solve</h2>
+        <h2 className="section-heading pb-9 text-center">Problems we solve</h2>
         <div className=" relative ">
           <Swiper
             onBeforeInit={(swiper) => {

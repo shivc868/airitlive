@@ -6,7 +6,7 @@ const MediaNetwork = () => {
   return (
     <section
       id="media-nextwork"
-      className="px-4 lg:py-14 lg:max-w-[1032px] w-full mx-auto py-6"
+      className="px-4 pb-14 lg:pb-16 lg:max-w-[1032px] w-full mx-auto"
     >
       <h3 className="text-base   sm:text-lg md:text-xl lg:text-2xl font-bold font-lato text-center text-thunder">
         $5M Revenue Boost Across Our Media Network"

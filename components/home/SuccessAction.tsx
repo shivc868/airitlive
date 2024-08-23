@@ -1,30 +1,10 @@
 import React from "react";
 import SliderLayout from "../common/SliderLayout";
-
-const slidesData = [
-  {
-    logo: "/img/red-robin.webp",
-    partner: "Major League Partner",
-    percentage: "50%",
-    description: "uplift in per-game ad revenue",
-  },
-  {
-    logo: "/img/red-robin.webp",
-    partner: "24/7 News Network",
-    percentage: "40%",
-    description: "improvement in breaking news monetization",
-  },
-  {
-    logo: "/img/red-robin.webp",
-    partner: "Streaming Giant",
-    percentage: "80%",
-    description: "increase in completed ad views",
-  },
-];
+import { sucessslidesData } from "../common/Helper";
 
 const SuccessAction = () => (
   <>
-    <h3 className="section-heading text-center mb-4 lg:mb-6">
+    <h3 className="section-heading text-center mb-4 lg:mb-7">
       Success in Action
     </h3>
     <SliderLayout
@@ -32,10 +12,10 @@ const SuccessAction = () => (
       classname="max-w-[940px] w-full h-full relative mx-auto"
       paginationClass="pagination-style-one"
     >
-      {slidesData.map((slide, index) => (
+      {sucessslidesData.map((slide, index) => (
         <div
           key={index}
-          className={`flex items-center w-full justify-between min-h-[160px] py-4 md:py-[37px] px-5 md:px-[50px] rounded-[22px] shadow-[-8px_9px_8.1px_0px_rgba(0,0,0,0.25)] h-full ${
+          className={`flex items-center w-full justify-between min-h-[160px] lg:min-h-[270px] py-4 md:py-[37px] px-5 md:px-[50px] rounded-[22px] shadow-[-8px_9px_8.1px_0px_rgba(0,0,0,0.25)] h-full ${
             slide.partner === "Major League Partner"
               ? "bg-lightPurple"
               : slide.partner === "24/7 News Network"

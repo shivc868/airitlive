@@ -95,9 +95,9 @@ const WhyChoose = () => {
   };
 
   return (
-    <section className="py-16 px-4 max-w-[920px]  mx-auto">
+    <section className="py-14 lg:pt-16 lg:pb-24 px-4 max-w-[920px]  mx-auto">
       <div className={styles.container}>
-        <h3 className="text-center py-8 section-heading">
+        <h3 className="text-center pb-12 section-heading">
           Why Choose AirItLive?
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-content-center place-items-center gap-1">

@@ -29,7 +29,7 @@ const AccordionMenu: React.FC<AccordionMenuProps> = ({
     <div className="accordion w-full">
       <button
         onClick={toggleAccordion}
-        className="flex justify-between w-full gap-2 items-center w-full h-14 py-4 px-4 md:px-8 border-thunder border-opacity-20 border-b"
+        className="flex justify-between  gap-2 items-center w-full h-14 py-4 px-4 md:px-8 border-thunder border-opacity-20 border-b"
       >
         <span className="text-base font-lato font-medium leading-none">
           {buttonLabel}

@@ -86,17 +86,18 @@ const TailoredAI: React.FC<SuccessActionProps> = ({ prevIcon, nextIcon }) => {
 
   return (
     <section className="w-full mx-auto relative success-in-action space-y-14 max-w-[1198px] md:px-4">
-      <div className="space-y-4 px-4 md:px-0">
+      <div className="px-4 md:px-0">
         <h3 className="section-heading text-center">
           Global Sports & Entertainment Group
         </h3>
-        <p className="text-[#2D293E] font-bold font-lato text-xl xl:text-2xl text-center">
+        <p className="text-plum font-bold font-lato text-xl lg:text-2xl text-center mt-4">
           Your Content, Maximized Everywhere Network
         </p>
+        <h3 className="section-heading text-center mt-16">
+          Tailored AI for your Media
+        </h3>
       </div>
-      <h3 className="section-heading text-center">
-        Tailored AI for your Media
-      </h3>
+
       <div className="md:block hidden relative">
         <div className="max-w-[1122px] relative mx-auto">
           <Swiper

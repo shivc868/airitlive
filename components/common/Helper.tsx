@@ -295,3 +295,23 @@ export const problemData = [
       "Air1Live provides detailed and transparent reporting on ad performance, empowering you with the insights needed to make informed decisions and optimize your revenue.",
   },
 ];
+export const sucessslidesData = [
+  {
+    logo: "/img/red-robin.webp",
+    partner: "Major League Partner",
+    percentage: "50%",
+    description: "uplift in per-game ad revenue",
+  },
+  {
+    logo: "/img/red-robin.webp",
+    partner: "24/7 News Network",
+    percentage: "40%",
+    description: "improvement in breaking news monetization",
+  },
+  {
+    logo: "/img/red-robin.webp",
+    partner: "Streaming Giant",
+    percentage: "80%",
+    description: "increase in completed ad views",
+  },
+];
