@@ -38,7 +38,7 @@ const Amplify = () => {
               <PerformanceMetricsCards
                 icon={<EntertainmentIcon />}
                 percentage="70%"
-                category="Enternaiment"
+                category="Entertainment"
                 description="better viewer retention during binge sessions"
               />
             </div>
