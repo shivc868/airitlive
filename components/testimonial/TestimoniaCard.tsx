@@ -17,7 +17,7 @@ interface TestimoniaCardProps {
 const TestimoniaCard: React.FC<TestimoniaCardProps> = ({ data }) => {
   return (
     <article className="bg-white cursor-pointer gap-3 font-inter p-5 mx-2 sm:mx-2 xl:mx-4 rounded-[6.714px] max-w-[340px] w-full lg:max-w-[440px] flex flex-col justify-between">
-      <MdIcon />
+      {/* <MdIcon /> */}
       <div className="flex-1">
         <p className="text-aswadBlack text-[14px] sm:text-[16px] lg:text-[18px] leading-[170%]">
           {data.feedback}

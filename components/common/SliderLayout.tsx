@@ -56,7 +56,7 @@ const SliderLayout: React.FC<SuccessActionProps> = ({
       </Swiper>
       <div className="flex items-start ">
         <button
-          className={`swiper-button-prev  lg:!w-11 ${
+          className={`swiper-button-prev !top-[40%] lg:!w-11 ${
             isSpecialPage ? "lg:-ml-16" : ""
           }  rotate-180 ${isBeginning ? "opacity-0 pointer-events-none" : ""}`}
           onClick={() => swiperRef.current?.slidePrev()}

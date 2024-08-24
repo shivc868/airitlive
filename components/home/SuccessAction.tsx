@@ -27,7 +27,7 @@ const SuccessAction = () => (
             <img
               src={slide.logo}
               alt={`${slide.partner} Logo`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </div>
           <div className="w-full flex flex-col max-w-[310px] items-center space-y-2">

@@ -71,8 +71,6 @@ export const networks = [
   { src: "/img/fox-sports.webp", alt: "Fox Sports" },
   { src: "/img/epsilon.png", alt: "Epsilon" },
   { src: "/img/news18.webp", alt: "News18" },
-  { src: "/img/major-league-partner.png", alt: "News18" },
-  { src: "/img/news-network.png", alt: "News18" },
 ];
 export const testimonialData = [
   {
@@ -299,19 +297,19 @@ export const problemData = [
 ];
 export const sucessslidesData = [
   {
-    logo: "/img/red-robin.webp",
+    logo: "/img/major-league-partner.png",
     partner: "Major League Partner",
     percentage: "50%",
     description: "uplift in per-game ad revenue",
   },
   {
-    logo: "/img/red-robin.webp",
+    logo: "/img/streaming-giant.png",
     partner: "24/7 News Network",
     percentage: "40%",
     description: "improvement in breaking news monetization",
   },
   {
-    logo: "/img/red-robin.webp",
+    logo: "/img/news-network.png",
     partner: "Streaming Giant",
     percentage: "80%",
     description: "increase in completed ad views",
