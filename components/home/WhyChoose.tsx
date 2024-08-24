@@ -13,9 +13,9 @@ const WhyChoose = () => {
       isHovered: false,
     },
     {
-      title: "Minimum CPMs ",
+      title: "Maximum CPMs ",
       points: [
-        "Offer guaranteed minimum CPMs, especially for premium inventory",
+        "Offer guaranteed maximum CPMs, especially for premium inventory",
         "Provide fill rate guarantees to ensure consistent revenue",
       ],
       isHovered: false,
