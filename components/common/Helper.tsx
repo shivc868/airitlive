@@ -303,13 +303,13 @@ export const sucessslidesData = [
     description: "uplift in per-game ad revenue",
   },
   {
-    logo: "/img/streaming-giant.png",
+    logo: "/img/news-network.png",
     partner: "24/7 News Network",
     percentage: "40%",
     description: "improvement in breaking news monetization",
   },
   {
-    logo: "/img/news-network.png",
+    logo: "/img/streaming-giant.png",
     partner: "Streaming Giant",
     percentage: "80%",
     description: "increase in completed ad views",
