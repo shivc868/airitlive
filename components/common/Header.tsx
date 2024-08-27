@@ -47,7 +47,7 @@ const Header: React.FC<IHeaderProps> = (props) => {
                   <HeaderLinks showSidebar={false} />
                 </div>
                 <Link href="/contact">
-                  <button className="btn-primary">Get in touchs</button>
+                  <button className="btn-primary">Get In Touch</button>
                 </Link>
               </div>
 
