@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { styles } from "../common/style";
 
-const ServicesHero = () => {
+const EntertainmentHero = () => {
   return (
     <>
       <header className="px-4">
@@ -10,10 +10,10 @@ const ServicesHero = () => {
         >
           <h1 className="flex flex-col text-[30px] sm:text-[50px] lg:text-[68px] leading-[1] font-helvetica-bold font-bold tracking-[5px] text-center">
             <span className="gradient-hero-main-text text-center leading-[1] ">
-              One AI Partner
+            One Stop Solution For
             </span>
             <span className="gradient-hero-main-text text-center leading-[1] ">
-              Three Media Powerhouses
+              Entertainment Channel & Platform Monetization
             </span>
           </h1>
           <p className="text-lg text-center sm:text-[24px] lg:text-[28px] text-plum font-lato font-medium leading-[1.2]">
@@ -30,4 +30,4 @@ const ServicesHero = () => {
   );
 };
 
-export default ServicesHero;
+export default EntertainmentHero;
