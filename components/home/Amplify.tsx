@@ -25,21 +25,24 @@ const Amplify = () => {
                 percentage="95+"
                 category="News"
                 description="higher engagement during live events"
+                url="/"
               />
               <PerformanceMetricsCards
                 icon={<SportsIcon />}
                 percentage="60%"
                 category="Sports"
                 description="increased ad relevance in breaking stories"
+                url="/"
               />
             </div>
             <div className="hidden lg:block w-[250px] h-[250px]"></div>
-            <div className="lg:absolute right-0">
+            <div className="lg:absolute z-10 right-0">
               <PerformanceMetricsCards
                 icon={<EntertainmentIcon />}
                 percentage="70%"
                 category="Entertainment"
                 description="better viewer retention during binge sessions"
+                url="/"
               />
             </div>
           </div>

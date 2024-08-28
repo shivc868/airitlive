@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard, Navigation, Parallax } from "swiper/modules";
 import { NextButton, PrevButtton } from "../common/Icons";
 import TailoredAIMobile from "./TailoredAIMobile";
+import Link from "next/link";
 
 interface SuccessActionProps {
   children?: React.ReactNode;
@@ -26,31 +27,54 @@ const tailoredAi = [
       {
         src: "/img/real-time.webp",
         title: "Real Time Ad Insertion During Live Sport Events",
+        url: "/",
       },
-      { src: "/img/fan-engagement.webp", title: "Fan Engagement Optimization" },
+      {
+        src: "/img/fan-engagement.webp",
+        title: "Fan Engagement Optimization",
+        url: "/",
+      },
       {
         src: "/img/sponsrship.webp",
         title: "Sponsorship Performance Tracking",
+        url: "/",
       },
     ],
   },
   {
     category: "news",
     items: [
-      { src: "/img/breaking-news.webp", title: "Breaking News Alert" },
-      { src: "/img/add.webp", title: "Context Aware Ad Placement" },
+      {
+        src: "/img/breaking-news.webp",
+        title: "Breaking News Alert",
+        url: "/",
+      },
+      { src: "/img/add.webp", title: "Context Aware Ad Placement", url: "/" },
       {
         src: "/img/cross.webp",
         title: "Cross Platform Story Flow Optimization",
+        url: "/",
       },
     ],
   },
   {
     category: "entertainment",
     items: [
-      { src: "/img/friendly-app.webp", title: "Binge-friendly Ad Experience" },
-      { src: "/img/content.webp", title: "Content Matched Brand Integration" },
-      { src: "/img/viewer-journey.webp", title: "Viewer Journey Monetization" },
+      {
+        src: "/img/friendly-app.webp",
+        title: "Binge-friendly Ad Experience",
+        url: "/",
+      },
+      {
+        src: "/img/content.webp",
+        title: "Content Matched Brand Integration",
+        url: "/",
+      },
+      {
+        src: "/img/viewer-journey.webp",
+        title: "Viewer Journey Monetization",
+        url: "/",
+      },
     ],
   },
 ];
@@ -147,16 +171,18 @@ const TailoredAI: React.FC<SuccessActionProps> = ({ prevIcon, nextIcon }) => {
             {tailoredAi.flatMap((category) =>
               category.items.map((item, idx) => (
                 <SwiperSlide key={idx}>
-                  <div className="flex flex-col relative w-full h-[220px]">
-                    <img
-                      src={item.src}
-                      className="w-full absolute inset-0 rounded-md h-full object-cover object-center"
-                      alt={item.title}
-                    />
-                    <h2 className="text-white z-10 flex justify-start px-4 py-8 items-end h-full font-semibold max-w-[280px] text-lg font-inter">
-                      {item.title}
-                    </h2>
-                  </div>
+                  <Link href={item.url}>
+                    <div className="flex flex-col relative w-full h-[220px]">
+                      <img
+                        src={item.src}
+                        className="w-full absolute inset-0 rounded-md h-full object-cover object-center"
+                        alt={item.title}
+                      />
+                      <h2 className="text-white z-10 flex justify-start px-4 py-8 items-end h-full font-semibold max-w-[280px] text-lg font-inter">
+                        {item.title}
+                      </h2>
+                    </div>
+                  </Link>
                 </SwiperSlide>
               ))
             )}

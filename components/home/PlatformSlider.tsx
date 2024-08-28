@@ -20,14 +20,15 @@ import {
 } from "swiper/modules";
 import { NextButton, PrevButtton } from "../common/Icons";
 import ImageMagnifier from "../common/ImageMagnifier";
+import Link from "next/link";
 
 const platforms = [
-  { src: "/img/platform-1.png", title: "CTV" },
-  { src: "/img/platform-2.png", title: "OTT" },
-  { src: "/img/platform-3.webp", title: "Native" },
-  { src: "/img/platform-4.webp", title: "Apps" },
-  { src: "/img/platform-5.webp", title: "Games" },
-  { src: "/img/platform-6.webp", title: "Website" },
+  { src: "/img/platform-1.png", title: "CTV", url: "/" },
+  { src: "/img/platform-2.png", title: "OTT", url: "/" },
+  { src: "/img/platform-3.webp", title: "Native", url: "/" },
+  { src: "/img/platform-4.webp", title: "Apps", url: "/" },
+  { src: "/img/platform-5.webp", title: "Games", url: "/" },
+  { src: "/img/platform-6.webp", title: "Website", url: "/" },
 ];
 
 const PlatformSlider: React.FC = () => {
@@ -83,15 +84,17 @@ const PlatformSlider: React.FC = () => {
                 key={index}
                 className="!h-[150px] sm:h-[200px] flex  rounded-md items-center justify-center"
               >
-                <div className="relative w-full h-full">
-                  <ImageMagnifier
-                    height="!min-h-[150px] sm:h-[200px]"
-                    src={platform.src}
-                  />
-                  <h2 className="text-black z-40 relative flex items-center justify-center sm:px-4 px-2 pt-2 font-semibold text-sm font-inter">
-                    {platform.title}
-                  </h2>
-                </div>
+                <Link className="cursor-pointer" href={platform.url}>
+                  <div className="relative w-full h-full">
+                    <ImageMagnifier
+                      height="!min-h-[150px] sm:h-[200px]"
+                      src={platform.src}
+                    />
+                    <h2 className="text-black z-40 relative flex items-center justify-center sm:px-4 px-2 pt-2 font-semibold text-sm font-inter">
+                      {platform.title}
+                    </h2>
+                  </div>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>
@@ -123,12 +126,14 @@ const PlatformSlider: React.FC = () => {
         >
           {platforms.map((platform, index) => (
             <SwiperSlide key={index} className="flex items-center">
-              <div className="relative w-full h-[220px]">
-                <ImageMagnifier src={platform.src} />
-                <h2 className="text-center text-thunder text-lg font-inter mt-2">
-                  {platform.title}
-                </h2>
-              </div>
+              <Link className="cursor-pointer" href={platform.url}>
+                <div className="relative w-full h-[220px]">
+                  <ImageMagnifier src={platform.src} />
+                  <h2 className="text-center text-thunder text-lg font-inter mt-2">
+                    {platform.title}
+                  </h2>
+                </div>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>

@@ -126,7 +126,7 @@ const AnimBox = () => {
   return (
     <>
       <canvas
-        className="fixed top-0 left-0 z-0 opacity-20 w-full h-full"
+        className="fixed pointer-events-none top-0 left-0 z-0 opacity-20 w-full h-full"
         ref={canvasRef}
         style={{ display: "block" }}
       />
@@ -138,7 +138,7 @@ const AnimBox = () => {
           scale: 3 * randomNumberLeft,
           opacity: 0.24 * randomNumberLeft,
         }}
-        className="rounded-full transition-all opacity-[0.24] duration-[2s] ease-linear fixed w-[45vw] h-[56vh] blur-[40px]"
+        className="rounded-full pointer-events-none transition-all opacity-[0.24] duration-[2s] ease-linear fixed w-[45vw] h-[56vh] blur-[40px]"
       >
         <img
           src="/img/moving-left.png"
@@ -153,7 +153,7 @@ const AnimBox = () => {
           scale: 3 * randomNumberRight,
           opacity: 0.24 * randomNumberRight,
         }}
-        className="rounded-full transition-all opacity-[0.24] duration-[2s] ease-linear fixed w-[45vw] h-[56vh] blur-[40px]"
+        className="rounded-full pointer-events-none transition-all opacity-[0.24] duration-[2s] ease-linear fixed w-[45vw] h-[56vh] blur-[40px]"
       >
         <img
           src="/img/moving-right.png"

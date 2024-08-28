@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
                 Subscribe
               </button>
             </form>
-            <div className="flex space-x-1.5 items-center mt-8 ">
+            <div className="flex space-x-1.5 items-center mt-8">
               {socialLinks.map((link, index) => (
                 <Link
                   href={link.href}
