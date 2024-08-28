@@ -74,7 +74,7 @@ const Header: React.FC<IHeaderProps> = (props) => {
           <div className="flex h-full overflow-auto items-start justify-center flex-col w-full">
             <HeaderLinks showSidebar />
             <Link href="/contact" className="py-5 px-4">
-              <button className="btn-primary">Get in touch</button>
+              <button className="btn-primary">Get In Touch</button>
             </Link>
           </div>
         </div>

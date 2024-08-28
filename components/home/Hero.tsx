@@ -26,7 +26,7 @@ const Hero = () => {
             href="/contact"
             className="border-[3px] lg:text-[28px]  !py-1.5 border-[#802BB1;]"
           >
-            Get in touch
+            Get In Touch
           </SecondaryButton>
         </div>
       </div>
