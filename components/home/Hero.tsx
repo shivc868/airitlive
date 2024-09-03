@@ -12,7 +12,7 @@ const Hero = () => {
       >
         <h1 className="flex flex-col text-[30px] sm:text-[50px] lg:text-[68px] leading-[1]  font-helvetica-bold font-bold tracking-[6.8px]">
           <span className="gradient-hero-main-text text-center sm:text-start leading-[1]">
-            One AI Partner
+            One AI Partner's
           </span>
           <span className="gradient-hero-main-text text-center sm:text-start leading-[1]">
             Three Media Powerhouses
