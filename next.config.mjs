@@ -5,11 +5,11 @@ const nextConfig = {
     return [
       {
         source: "/blog",
-        destination: "https://www.airitlive.com/blog", // External WordPress URL
+        destination: "https://www.airitlive.com/blog", // Replace with actual Hostinger URL
       },
       {
         source: "/blog/:slug*",
-        destination: "https://www.airitlive.com/blog/:slug*", // External WordPress URL
+        destination: "https://www.airitlive.com/blog/:slug*", // Replace with actual Hostinger URL
       },
     ];
   },
