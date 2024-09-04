@@ -5,7 +5,7 @@ const nextConfig = {
     return [
       {
         source: "/blog/:slug*",
-        destination: "https://your-wordpress-domain.com/blog/:slug*", // External WordPress URL
+        destination: "https://www.airitlive.com/blog/:slug*", // External WordPress URL
       },
     ];
   },
