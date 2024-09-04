@@ -1,0 +1,4 @@
+RewriteEngine On
+# Redirect the /blog path to the actual /blog on Hostinger
+RewriteCond %{REQUEST_URI} ^/blog
+RewriteRule ^(.*)$ https://www.airitlive.com/blog/$1 [L,R=301]
